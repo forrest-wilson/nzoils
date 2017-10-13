@@ -6,6 +6,7 @@
     @include positioning(fixed, 0, 0, 0);
     height: 60px;
     background-color: $primaryDarkColor;
+    z-index: 1000;
 
     .logo {
         @include positioning(relative, 0, 0);
