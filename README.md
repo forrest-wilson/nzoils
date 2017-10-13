@@ -52,3 +52,8 @@ This project uses the following libraries:
 
 * [jQuery v3.2.1](https://jquery.com/)
 * [Normalize v7.0.0](https://necolas.github.io/normalize.css/)
+
+## Contributors
+
+* [Florence Lo](https://github.com/fpwl) - Lead
+* [Forrest Wilson-Jennings](https://github.com/forrest-wilson) - Dev
