@@ -1,0 +1,35 @@
+/////////////////
+//// Modules ////
+/////////////////
+
+.header {
+    height: 60px;
+    @include positioning(fixed, 0, 0, 0);
+    background-color: $darkColor;
+
+    .hamburger-toggle {
+        width: 30px;
+        height: 22px;
+        @include positioning(absolute, $r: 0, $t: 0);
+        margin: 19px;
+
+        .ham-line {
+            @include positioning(absolute, 0, 0);
+            background-color: $goldColor;
+            height: 4px;
+            border-radius: 5px;
+        }
+
+        .line-1 {
+            top: 0px;
+        }
+
+        .line-2 {
+            top: 9px;
+        }
+
+        .line-3 {
+            bottom: 0px;
+        }
+    }
+}
