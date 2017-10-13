@@ -11,7 +11,8 @@ var gulp = require("gulp"),
     runSequence = require("run-sequence"),
     browserSync = require("browser-sync").create(),
     notify = require("gulp-notify"),
-    autoprefixer = require("gulp-autoprefixer");
+    autoprefixer = require("gulp-autoprefixer"),
+    imagemin = require("gulp-imagemin");
 
 // Cleans the dist directory
 gulp.task("clean", () => {
@@ -63,6 +64,27 @@ gulp.task("htmlmin", () => {
     .pipe(gulp.dest('./dist/'));
 });
 
+// Minifies and compresses images for production
+gulp.task("imagemin", () => {
+    gulp.src("./src/img/**/*.*")
+    // .pipe(imagemin([
+    //     imagemin.gifsicle({interlaced: true}),
+    //     imagemin.jpegtran({progressive: true}),
+    //     imagemin.optipng({optimizationLevel: 5}),
+    //     imagemin.svgo({
+    //         plugins: [
+    //             {
+    //                 removeViewBox: true
+    //             },
+    //             {
+    //                 cleanupIDs: false
+    //             }
+    //         ]
+    //     })
+    // ]))
+    .pipe(gulp.dest("./dist/img/"));
+});
+
 // Configures the BrowserSync NPM module
 gulp.task("browser-sync", () => {
     browserSync.init({
@@ -89,7 +111,7 @@ gulp.task("reload-browser", () => {
 
 // Builds the above tasks and runs them sequentially
 gulp.task("build:dist", (callback) => {
-    runSequence("clean", "sass", "js-compress", "htmlmin", "reload-browser", callback);
+    runSequence("clean", "sass", "js-compress", "htmlmin", "imagemin", "reload-browser", callback);
 });
 
 // The initial task that is called
