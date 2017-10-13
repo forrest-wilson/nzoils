@@ -1,0 +1,31 @@
+{
+  "name": "gst-bot-website",
+  "version": "1.0.0",
+  "description": "GST Bot Website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/gulp/bin/gulp.js start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://forrest-wilson@bitbucket.org/forrest-wilson/gst-bot-website.git"
+  },
+  "author": "Forrest Wilson-Jennings",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/forrest-wilson/gst-bot-website#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-replace": "^0.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "gulp-clean": "^0.3.2",
+    "gulp-rename": "^1.2.2",
+    "run-sequence": "^2.2.0"
+  }
+}
