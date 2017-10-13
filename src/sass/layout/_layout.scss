@@ -5,3 +5,17 @@
 .inner {
     padding: 10px;
 }
+
+.section-heading {
+    color: $goldColor;
+    text-align: center;
+}
+
+.heading-underline {
+    height: 3px;
+    background-color: $goldColor;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    border-radius: $borderRadius;
+}
