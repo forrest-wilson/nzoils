@@ -40,5 +40,5 @@ This should build the project and create a 'dist' folder where the compiled code
 
 This project uses the following libraries:
 
-* [jQuery 3.2.1](https://jquery.com/)
-* [Normalize](https://necolas.github.io/normalize.css/)
+* [jQuery v3.2.1](https://jquery.com/)
+* [Normalize v7.0.0](https://necolas.github.io/normalize.css/)
