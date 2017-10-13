@@ -1,15 +1,54 @@
 //////////////////////////
-//// Colour Variables ////
+//// COLOUR Variables ////
 //////////////////////////
 
-// Text
-$lightTextColor: #FFF;
-$darkTextColor: rgb(138, 141, 143);
+// Document Main Colours
+$goldColor: #86754E;
+$silverColor: #898D8F;
+$primaryDarkColor: #000; 
+$secondaryDarkColor: #161616;
+$tertiaryDarkColor: #2b2b2b; //used for the footer
 
-// Backgrounds etc
-$darkColor: #000;
-$goldColor: rgb(131, 117, 84);
-$darkOverlayColor: rgba(0, 0, 0, 0.75);
+//Product Catergory Colours
+$avocadoSectionColor: #ABCB4E;
+$oliveSectionColor: #E2CE3B;
+$infusedSectionColor: #8BA017;
+$balsamicSectionColor: #475100;
+
+// Text Colours
+$lightTextColor: #FFF;
+
+// Backgrounds Colours
+$popUpOverlayColor: rgba(22,22,22,0.85);
+
+$productBoxColor: #F2F2F2;
 
 // Misc
 $transitionSpeed: 400ms;
+
+
+//////////////////////////
+//// FONT Variables //////
+//////////////////////////
+
+// Font
+$primaryFont: 'Roboto', sans-serif;
+$secondaryFont: 'Beyond the mountians'; //Need to import font as it's not a websafe font...i think
+
+// Font Weight (used only for primary font)
+$headerFontWeight: 700;
+$paragraphFontWeight: 400;
+
+// Font Size
+$paragraphFontSize: 16px;
+$sectionHeaderFontSize: 45px;
+$productCategoryHeaderFontSize: 35px;
+$productItemHeaderFontSize: 30px;
+
+
+//////////////////////////
+//// OTHER Variables /////
+//////////////////////////
+
+//Border Radius
+$borderRadius: 20px;
