@@ -15,6 +15,7 @@ $(document).ready(function() {
         }
     });
 
+    // Closes the mobile navigation
     function closeNav() {
         $("#hamburgerToggle").removeClass("is-active-hamburger");
         document.getElementById("mobileNav").style.width = "0";
@@ -23,6 +24,7 @@ $(document).ready(function() {
         isNavOpen = false;
     }
 
+    // Opens the mobile navigation
     function openNav() {
         $("#hamburgerToggle").addClass("is-active-hamburger");
         document.getElementById("mobileNav").style.width = "160px";
@@ -36,6 +38,7 @@ $(document).ready(function() {
         closeNav();
     });
 
+    // Scrolls to the top of the page when the logo is clicked
     $("#logo").click(function() {
         $("html, body").animate({
             scrollTop: $("html, body").offset().top
