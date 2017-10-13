@@ -50,18 +50,20 @@
 .main {
     padding-top: 60px;
 
-    .mobile-slideshow {
-        background-image: url("../img/slideshow/mobileSlide.png");
-        background-size: cover;
-        background-position: center;
-        height: 400px;
+    .slideshow-section {
+        .mobile-slideshow {
+            background-image: url("../img/slideshow/mobileSlide.png");
+            background-size: cover;
+            background-position: center;
+            height: 400px;
 
-        .blurb {
-            color: $lightTextColor;
-            text-align: center;
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
+            .blurb {
+                color: $lightTextColor;
+                text-align: center;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
     }
 }
