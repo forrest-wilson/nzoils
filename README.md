@@ -41,7 +41,7 @@ This should build the project and create a 'dist' folder where the compiled code
 Once a new node module is being used, please run the below command to update your node_modules folder.
 
 ```
-npm update
+npm install
 ```
 
 Once this has been run, it is a good idea to re-run the start command in terminal.
