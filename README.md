@@ -44,7 +44,7 @@ Once a new node module is being used, please run the below command to update you
 npm update
 ```
 
-Once this has been run, it is a good idea to rerun the start command in terminal.
+Once this has been run, it is a good idea to re-run the start command in terminal.
 
 ## Libraries
 
