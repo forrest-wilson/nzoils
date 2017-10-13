@@ -35,6 +35,10 @@
     }
 }
 
+.main {
+    @include positioning($t: 60px);
+}
+
 .mobile-nav {
     @include positioning(fixed, $r: 0, $t: 60px);
     height: 100%;
