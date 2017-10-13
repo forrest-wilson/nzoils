@@ -50,6 +50,17 @@
 .main {
     padding-top: 60px;
 
+    .section {
+        article {
+            margin-bottom: 25px;
+
+            .section-heading {
+                color: $goldColor;
+                text-align: center;
+            }
+        }
+    }
+
     .slideshow-section {
         .mobile-slideshow {
             background-image: url("../img/slideshow/mobileSlide.png");
@@ -63,6 +74,48 @@
                 max-width: 400px;
                 margin-left: auto;
                 margin-right: auto;
+            }
+        }
+    }
+
+    .our-products {
+        .product {
+            .product-title {
+                border-radius: $borderRadius;
+                text-align: center;
+                color: $lightTextColor;
+
+                .blurb {
+                    margin: 0;
+                    padding: 16px;
+                }
+            }
+
+            .avocado-title {
+                background-color: $avocadoSectionColor;
+            }
+        }
+    }
+
+    .about {
+        .about-blurb {
+            color: $primaryDarkColor;
+            text-align: center;
+            line-height: 25px;
+
+            .quote {
+                color: green; // Unsure what color to set this text to
+                font-weight: $headerFontWeight;
+                font-size: 20px;
+            }
+        }
+
+        .about-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            img {
+                width: 100%;
             }
         }
     }
