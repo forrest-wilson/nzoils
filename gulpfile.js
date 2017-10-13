@@ -54,8 +54,7 @@ gulp.task("htmlmin", () => {
     return gulp.src('./src/**/*.html')
     .pipe(htmlmin({
         collapseWhitespace: true,
-        removeComments: true,
-        removeEmptyElements: true
+        removeComments: true
     }))
     .pipe(replace('node_modules/normalize.css/normalize.css', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css'))
     .pipe(replace('css/style.css', 'css/style.min.css'))
