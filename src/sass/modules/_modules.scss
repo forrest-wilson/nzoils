@@ -5,7 +5,7 @@
 .header {
     @include positioning(fixed, 0, 0, 0);
     height: 60px;
-    background-color: $darkColor;
+    background-color: $primaryDarkColor;
 
     .hamburger-toggle {
         @include positioning(absolute, $r: 0, $t: 0);
@@ -42,23 +42,26 @@
 .mobile-nav {
     @include positioning(fixed, $r: 0, $t: 60px);
     height: 100%;
-    background-color: $darkOverlayColor;
+    background-color: $secondaryDarkColor;
     width: 0;
     overflow-x: hidden;
     transition: $transitionSpeed;
 
     .nav-ul {
         overflow: scroll;
+        font-family: $primaryFont;
 
         li {
             text-align: center;
-            color: $darkTextColor;
+            color: $silverColor;
             padding: 10px;
+            font-weight: $paragraphFontWeight;
         }
 
         .title-nav {
             color: $goldColor;
             font-size: 1.5em;
+            font-weight: $headerFontWeight;
         }
     }
 }
