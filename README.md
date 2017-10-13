@@ -35,3 +35,10 @@ npm run start
 This should build the project and create a 'dist' folder where the compiled code is saved. Terminal will continue to listen for any changes made to files in the 'src' directory and re-build whenever anything is saved.
 
 **Note:** The 'dist' folder is **NOT** to be added to the repo.
+
+## Libraries
+
+This project uses the following libraries:
+
+* [jQuery 3.2.1](https://jquery.com/)
+* [Normalize](https://necolas.github.io/normalize.css/)
