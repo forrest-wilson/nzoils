@@ -36,6 +36,16 @@ This should build the project and create a 'dist' folder where the compiled code
 
 **Note:** The 'dist' folder is **NOT** to be added to the repo.
 
+### Updating after new node module installs
+
+Once a new node module is being used, please run the below command to update your node_modules folder.
+
+```
+npm update
+```
+
+Once this has been run, it is a good idea to rerun the start command in terminal.
+
 ## Libraries
 
 This project uses the following libraries:
