@@ -63,8 +63,15 @@ gulp.task("htmlmin", () => {
 gulp.task("browser-sync", () => {
     browserSync.init({
         server: {
-            baseDir: 'dist'
-        }
+            baseDir: 'dist', // Where the server will start from
+            index: 'index.html' // Default file to load
+        },
+        port: 3000, // Using the default port. Change if needed but don't commit
+        ui: {
+            port: 3001 // Using the default port. Change if needed but don't commit
+        },
+        notify: false, // Turns off the notification that the browser has connected to BrowserSync server
+        browser: [] // Enter a string or an array of strings to start specific browsers i.e. "google chrome", "safari" or "firefox". Keeping it empty will stop any browsers from opening
     });
 });
 
