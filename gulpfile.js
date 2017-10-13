@@ -83,14 +83,6 @@ gulp.task("reload-browser", () => {
     }));
 });
 
-// gulp.task("notify-success", () => {
-//     gulp.src("./dist")
-//     .pipe(notify({
-//         title: "Success!",
-//         message: "Project Successfully Built!"
-//     }));
-// });
-
 // Builds the above tasks and runs them sequentially
 gulp.task("build:dist", (callback) => {
     runSequence("clean", "sass", "js-compress", "htmlmin", "reload-browser", callback);
