@@ -52,9 +52,9 @@ gulp.task("htmlmin", () => {
         removeComments: true,
         removeEmptyElements: true
     }))
-    .pipe(replace('css/normalize.css', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css'))
+    .pipe(replace('node_modules/normalize.css/normalize.css', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css'))
     .pipe(replace('css/style.css', 'css/style.min.css'))
-    .pipe(replace('src="js/jquery-3.2.1.min.js">', 'src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">'))
+    .pipe(replace('src="node_modules/jquery/dist/jquery.min.js">', 'src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">'))
     .pipe(replace('js/app.js', 'js/app.min.js'))
     .pipe(gulp.dest('./dist/'));
 });

@@ -1,7 +1,7 @@
 {
-  "name": "gst-bot-website",
+  "name": "nzoils",
   "version": "1.0.0",
-  "description": "GST Bot Website",
+  "description": "NZOils Website",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,11 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://forrest-wilson@bitbucket.org/forrest-wilson/gst-bot-website.git"
+    "url": "git+https://github.com/forrest-wilson/nzoils.git"
   },
   "author": "Forrest Wilson-Jennings",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/forrest-wilson/gst-bot-website#readme",
+  "homepage": "https://github.com/forrest-wilson/nzoils",
   "devDependencies": {
     "browser-sync": "2.18.13",
     "gulp": "3.9.1",
@@ -26,6 +26,8 @@
   "dependencies": {
     "gulp-clean": "0.3.2",
     "gulp-rename": "1.2.2",
+    "jquery": "3.2.1",
+    "normalize.css": "7.0.0",
     "run-sequence": "2.2.0"
   }
 }
