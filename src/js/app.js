@@ -27,7 +27,7 @@ $(document).ready(function() {
     // Opens the mobile navigation
     function openNav() {
         $("#hamburgerToggle").addClass("is-active-hamburger");
-        document.getElementById("mobileNav").style.width = "160px";
+        document.getElementById("mobileNav").style.width = "180px";
         $("#navOverlay").fadeIn(transitionTime);
 
         isNavOpen = true;
