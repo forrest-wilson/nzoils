@@ -1,0 +1,19 @@
+///////////////
+//// State ////
+///////////////
+
+.is-active-hamburger {
+    .line-1 {
+        transform: rotate(-45deg);
+        top: 9px!important;
+    }
+
+    .line-2 {
+        opacity: 0;
+    }
+
+    .line-3 {
+        transform: rotate(45deg);
+        bottom: 9px!important;
+    }
+}

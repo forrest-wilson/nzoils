@@ -3,18 +3,19 @@
 /////////////////
 
 .header {
-    height: 60px;
     @include positioning(fixed, 0, 0, 0);
+    height: 60px;
     background-color: $darkColor;
 
     .hamburger-toggle {
+        @include positioning(absolute, $r: 0, $t: 0);
         width: 30px;
         height: 22px;
-        @include positioning(absolute, $r: 0, $t: 0);
         margin: 19px;
 
         .ham-line {
             @include positioning(absolute, 0, 0);
+            transition: $transitionSpeed;
             background-color: $goldColor;
             height: 4px;
             border-radius: 5px;
@@ -30,6 +31,30 @@
 
         .line-3 {
             bottom: 0px;
+        }
+    }
+}
+
+.mobile-nav {
+    @include positioning(fixed, $r: 0, $t: 60px);
+    height: 100%;
+    background-color: $darkOverlayColor;
+    width: 0;
+    overflow-x: hidden;
+    transition: $transitionSpeed;
+
+    .nav-ul {
+        overflow: scroll;
+
+        li {
+            text-align: center;
+            color: $darkTextColor;
+            padding: 10px;
+        }
+
+        .title-nav {
+            color: $goldColor;
+            font-size: 1.5em;
         }
     }
 }
