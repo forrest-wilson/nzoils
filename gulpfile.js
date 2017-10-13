@@ -10,7 +10,8 @@ var gulp = require("gulp"),
     replace = require("gulp-replace"),
     runSequence = require("run-sequence"),
     browserSync = require("browser-sync").create(),
-    notify = require("gulp-notify");
+    notify = require("gulp-notify"),
+    autoprefixer = require("gulp-autoprefixer");
 
 // Cleans the dist directory
 gulp.task("clean", () => {
@@ -28,6 +29,10 @@ gulp.task("sass", () => {
         title: "SASS Compilation Error",
         message: "<%= error.message %>"
     })))
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("./dist/css/"));
 });
