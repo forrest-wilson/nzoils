@@ -48,7 +48,22 @@
 }
 
 .main {
-    @include positioning($t: 60px);
+    padding-top: 60px;
+
+    .mobile-slideshow {
+        background-image: url("../img/slideshow/mobileSlide.png");
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+
+        .blurb {
+            color: $lightTextColor;
+            text-align: center;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }
 
 .mobile-nav {
@@ -61,7 +76,6 @@
 
     .nav-ul {
         overflow: scroll;
-        font-family: $primaryFont;
 
         li {
             text-align: center;
