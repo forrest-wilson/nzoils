@@ -139,20 +139,24 @@
     transition: $transitionSpeed;
     z-index: 500;
 
+    .title-nav {
+        color: $goldColor;
+        font-size: 1.5em;
+        font-weight: $headerFontWeight;
+        margin: 0;
+        text-align: center;
+    }
+
     .nav-ul {
         overflow: scroll;
 
-        li {
+        a {
             text-align: center;
             color: $silverColor;
             padding: 10px;
             font-weight: $paragraphFontWeight;
-        }
-
-        .title-nav {
-            color: $goldColor;
-            font-size: 1.5em;
-            font-weight: $headerFontWeight;
+            display: block;
+            line-height: 22px;
         }
     }
 }
