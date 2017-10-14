@@ -57,10 +57,6 @@ gulp.task("htmlmin", () => {
         collapseWhitespace: true,
         removeComments: true
     }))
-    .pipe(replace('node_modules/normalize.css/normalize.css', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css'))
-    .pipe(replace('css/style.css', 'css/style.min.css'))
-    .pipe(replace('src="node_modules/jquery/dist/jquery.min.js">', 'src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">'))
-    .pipe(replace('js/app.js', 'js/app.min.js'))
     .pipe(gulp.dest('./dist/'));
 });
 
@@ -85,6 +81,7 @@ gulp.task("imagemin", () => {
     .pipe(gulp.dest("./dist/img/"));
 });
 
+// Copies the .otf and .ttf fonts to the dist folder
 gulp.task("font-copy", () => {
     gulp.src("./src/fonts/**/*.otf")
     .pipe(gulp.dest("./dist/fonts/"));
