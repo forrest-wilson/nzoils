@@ -240,8 +240,18 @@
         background-color: $secondaryDarkColor;
 
         article, .section-heading {
-            color: $lightTextColor!important;
+            color: $lightTextColor;
             text-align: center;
+        }
+
+        .section-heading{
+            color: $goldColor;
+        }
+
+        .email-link{
+            font-weight: $headerFontWeight;
+            color:$lightTextColor;
+            text-decoration: underline;
         }
     }
 }
@@ -250,10 +260,11 @@
     background-color: $tertiaryDarkColor;
 
     .wrapper {
-        display: inline-block;
-        @include positioning(relative, 50%);
-        transform: translateX(-50%);
-
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:row;
+    
         img, p {
             float: left;
         }
@@ -267,6 +278,7 @@
     
         .logo {
             height: 50px;
+            margin:5px;
         }
     }
 }
