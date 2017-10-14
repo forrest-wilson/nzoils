@@ -50,7 +50,7 @@ gulp.task("js-compress", () => {
     .pipe(gulp.dest("./dist/js/"));
 });
 
-// Minifies HTML and replaces local script files with CDN and minified versions
+// Minifies HTML
 gulp.task("htmlmin", () => {
     return gulp.src('./src/**/*.html')
     .pipe(htmlmin({
