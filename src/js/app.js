@@ -73,7 +73,9 @@ $(document).ready(function() {
     });
 
     // Dismisses the product overlay
-    $(".fixed-close").click(function() {
+    $(".fixed-close").click(function(e) {
         $(this).parent().parent().fadeOut(transitionTime);
+
+        e.preventDefault();
     });
 });
