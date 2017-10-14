@@ -60,4 +60,20 @@ $(document).ready(function() {
 
         e.preventDefault();
     });
+
+    // Shows the overlay depending on which product is clicked
+    $(".product-item").click(function(e) {
+        var $href = $(this).children("a").attr("href");
+
+        $(this).each(function() {
+            $($href).fadeIn(transitionTime);
+        });
+
+        e.preventDefault();
+    });
+
+    // Dismisses the product overlay
+    $(".fixed-close").click(function() {
+        $(this).parent().parent().fadeOut(transitionTime);
+    });
 });
