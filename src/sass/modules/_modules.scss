@@ -9,14 +9,8 @@
     z-index: 1000;
 
     .logo {
-        @include positioning(relative, 0, 0);
-        margin: 0 auto;
         display: block;
-        height: 60px;
-    }
-
-    .logo-inner {
-        padding: 3px;
+        margin: 0 auto;
     }
 
     .hamburger-toggle {
@@ -45,6 +39,15 @@
             bottom: 0px;
         }
     }
+}
+
+.logo {
+    @include positioning();
+    height: 60px;
+}
+
+.logo-inner {
+    padding: 3px;
 }
 
 .main {
@@ -142,6 +145,40 @@
         h2 {
             text-align: center;
             color: green; // Unsure what color to set this text to
+        }
+    }
+
+    .contact {
+        background-color: $secondaryDarkColor;
+
+        article, .section-heading {
+            color: $lightTextColor!important;
+            text-align: center;
+        }
+    }
+}
+
+.footer {
+    background-color: $tertiaryDarkColor;
+
+    .wrapper {
+        display: inline-block;
+        @include positioning(relative, 50%);
+        transform: translateX(-50%);
+
+        img, p {
+            float: left;
+        }
+    
+        p {
+            margin: 0;
+            line-height: 60px;
+            padding-left: 20px;
+            color: $lightTextColor;
+        }
+    
+        .logo {
+            height: 60px;
         }
     }
 }
