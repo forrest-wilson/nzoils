@@ -2,6 +2,13 @@
 //// Utilities ////
 ///////////////////
 
+// Font Importing
+
+@font-face {
+    font-family: "Beyond the Mountains";
+    src: url("../fonts/beyond_the_mountains/beyond_the_mountains.ttf");
+}
+
 .clearfix:after {
     content: "";
     display: table;
