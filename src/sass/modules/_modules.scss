@@ -81,6 +81,42 @@
         }
     }
 
+    .oil-brand-links {
+        .aozora-bostock-logos {
+            background-color: $secondaryDarkColor;
+            width: 100%;
+
+            .bostock-logo-wrapper, .aozora-logo-wrapper{
+                width:100%;
+                min-height: 135px;
+                display: flex;
+                flex-direction: column;
+                align-items:center;
+                justify-content:center;
+                padding:15px;
+                
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    align-items:center;
+                    justify-content:center;
+                       
+                       .bostock-logo{
+                            max-width: 75%;
+                        }
+
+                        .aozora-logo{
+                            max-width: 60%;
+                            margin:10px;
+                        } 
+                }    
+            }
+            .bostock-logo-wrapper{
+                border-bottom: solid 1px $primaryDarkColor;
+            }
+        }
+    }
+
     .our-products {
         .product {
             .product-title {
