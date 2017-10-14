@@ -1,7 +1,8 @@
 $(document).ready(function() {
     // Variable Declarations
     var isNavOpen = false,
-        transitionTime = 400;
+        transitionTime = 400,
+        $htmlBody = $("html, body");
 
     // Toggle mobileNav
     $("#hamburgerToggle").click(function() {
@@ -40,8 +41,23 @@ $(document).ready(function() {
 
     // Scrolls to the top of the page when the logo is clicked
     $("#logo").click(function() {
-        $("html, body").animate({
-            scrollTop: $("html, body").offset().top
+        $htmlBody.animate({
+            scrollTop: $htmlBody.offset().top
         }, transitionTime);
+    });
+
+    // Navigation item click events
+    $("#mobileNav li").click(function(e) {
+        var $href = $(this).children("a").attr("href");
+
+        $(this).each(function() {
+            $htmlBody.animate({
+                scrollTop: $($href).offset().top - 60
+            }, transitionTime);
+        });
+
+        closeNav();
+
+        e.preventDefault();
     });
 });
