@@ -22,6 +22,8 @@ $(document).ready(function() {
         document.getElementById("mobileNav").style.width = "0";
         $("#navOverlay").fadeOut(transitionTime);
 
+        $("body").removeClass("stop-scroll");
+
         isNavOpen = false;
     }
 
@@ -30,6 +32,8 @@ $(document).ready(function() {
         $("#hamburgerToggle").addClass("is-active-hamburger");
         document.getElementById("mobileNav").style.width = "180px";
         $("#navOverlay").fadeIn(transitionTime);
+
+        $("body").addClass("stop-scroll");
 
         isNavOpen = true;
     }
