@@ -1,0 +1,12 @@
+///////////////////////
+//// Media Queries ////
+///////////////////////
+
+// Product height automation
+@media screen and (min-height: 720px) {
+    .product-info {
+        .inner {
+            height: auto;
+        }
+    }
+}
