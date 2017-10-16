@@ -42,7 +42,7 @@
 }
 
 .logo {
-    @include positioning();
+    position: relative;
     height: 60px;
 }
 
