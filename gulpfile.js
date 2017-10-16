@@ -89,6 +89,11 @@ gulp.task("font-copy", () => {
     .pipe(gulp.dest("./dist/fonts/"));
 });
 
+gulp.task("favicon", () => {
+    gulp.src("./src/favicon.png")
+    .pipe(gulp.dest("./dist"));
+});
+
 // Configures the BrowserSync NPM module
 gulp.task("browser-sync", () => {
     browserSync.init({
@@ -115,7 +120,7 @@ gulp.task("reload-browser", () => {
 
 // Builds the above tasks and runs them sequentially
 gulp.task("build:dist", (callback) => {
-    runSequence("clean", "sass", "js-compress", "htmlmin", "imagemin", "font-copy", "reload-browser", callback);
+    runSequence("clean", "sass", "js-compress", "htmlmin", "imagemin", "font-copy", "favicon", "reload-browser", callback);
 });
 
 // The initial task that is called
