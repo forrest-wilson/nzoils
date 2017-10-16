@@ -4,18 +4,6 @@ $(document).ready(function() {
         transitionTime = 400,
         $htmlBody = $("html, body");
 
-    // Toggle mobileNav
-    $("#hamburgerToggle").click(function() {
-        // Checks to see which state the navigation is in
-        if (isNavOpen) {
-            // If the nav is open
-            closeNav();
-        } else {
-            // If the nav is closed
-            openNav();
-        }
-    });
-
     // Closes the mobile navigation
     function closeNav() {
         $("#hamburgerToggle").removeClass("is-active-hamburger");
@@ -38,18 +26,6 @@ $(document).ready(function() {
         isNavOpen = true;
     }
 
-    // Closes the mobile nav when the overlay is clicked on
-    $("#navOverlay").click(function() {
-        closeNav();
-    });
-
-    // Scrolls to the top of the page when the logo is clicked
-    $("#logo").click(function() {
-        $htmlBody.animate({
-            scrollTop: $htmlBody.offset().top
-        }, transitionTime);
-    });
-
     // Generic function that requires a specific HTML structure to work
     // $selector must be a li element with an 'a' as a child
     function scrollNav($selector) {
@@ -64,15 +40,34 @@ $(document).ready(function() {
         event.preventDefault();
     }
 
+    // Scrolls to the top of the page when the logo is clicked
+    $("#logo").click(function() {
+        $htmlBody.animate({
+            scrollTop: $htmlBody.offset().top
+        }, transitionTime);
+    });
+
+    // Toggle mobileNav
+    $("#hamburgerToggle").click(function() {
+        // Checks to see which state the navigation is in
+        if (isNavOpen) {
+            // If the nav is open
+            closeNav();
+        } else {
+            // If the nav is closed
+            openNav();
+        }
+    });
+
     // Navigation item click events
     $("#mobileNav li").click(function() {
         closeNav();
         scrollNav(this);
     });
 
-    // Quick links click events
-    $("#contact .internal li").click(function() {
-        scrollNav(this);
+    // Closes the mobile nav when the overlay is clicked on
+    $("#navOverlay").click(function() {
+        closeNav();
     });
 
     // Shows the overlay depending on which product is clicked
@@ -91,5 +86,10 @@ $(document).ready(function() {
         $(this).parent().parent().fadeOut(transitionTime);
 
         event.preventDefault();
+    });
+
+    // Quick links click events
+    $("#contact .internal li").click(function() {
+        scrollNav(this);
     });
 });
