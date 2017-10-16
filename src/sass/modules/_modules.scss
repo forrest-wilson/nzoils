@@ -261,6 +261,10 @@
     .contact {
         background-color: $secondaryDarkColor;
 
+        article:last-child {
+            padding-bottom: 25px;
+        }
+
         article, .section-heading {
             color: $lightTextColor!important;
             text-align: center;
