@@ -109,7 +109,11 @@
                         max-width: 60%;
                         margin: 10px;
                     } 
-                }    
+                }
+
+                img {
+                    max-height: 150px;
+                }
             }
             
             .bostock-logo-wrapper{
