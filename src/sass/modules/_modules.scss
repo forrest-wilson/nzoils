@@ -349,7 +349,7 @@
         .close-line {
             @include positioning(absolute, 0, 0);
             transition: $transitionSpeed;
-            background-color: $goldColor;
+            background-color: $silverColor;
             height: 4px;
             border-radius: 5px;
         }
