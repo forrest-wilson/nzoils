@@ -66,17 +66,31 @@
 
     .slideshow-section {
         .mobile-slideshow {
-            background-image: url("../img/slideshow/mobileSlide.png");
+            // background-image: url("../img/slideshow/mobileSlide.png");
+            background-image: url("../img/landscape-placeholder.jpg");
             background-size: cover;
             background-position: center;
-            height: 400px;
+            height: 350px;
 
-            .blurb {
-                color: $lightTextColor;
-                text-align: center;
-                max-width: 280px;
-                margin-left: auto;
-                margin-right: auto;
+            .inner {
+                height: 350px;
+                position: relative;
+
+                .blurb {
+                    color: $lightTextColor;
+                    text-align: center;
+                    max-width: 280px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                img {
+                    @include positioning(absolute, 10px, 10px, $b: 10px);
+                    max-width: 400px;
+                    width: calc(100% - 20px);
+                    display: block;
+                    margin: 0 auto;
+                }
             }
         }
     }
