@@ -258,18 +258,32 @@
         background-color: $secondaryDarkColor;
 
         article, .section-heading {
-            color: $lightTextColor;
+            color: $lightTextColor!important;
             text-align: center;
         }
 
-        .section-heading{
+        .section-heading {
             color: $goldColor;
         }
 
-        .email-link{
+        .enquiries-blurb {
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .email-link {
             font-weight: $headerFontWeight;
-            color:$lightTextColor;
+            color: $lightTextColor;
             text-decoration: underline;
+        }
+
+        .quick-links {
+            a {
+                color: $lightTextColor;
+                line-height: 22px;
+                display: inline-block;
+            }
         }
     }
 }
@@ -421,10 +435,3 @@
         color: $balsamicSectionColor;
     }
 }
-
-
-// Debugging
-
-// #bostockLemon {
-//     display: block;
-// }
