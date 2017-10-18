@@ -11,7 +11,8 @@ var gulp = require("gulp"),
     browserSync = require("browser-sync").create(),
     notify = require("gulp-notify"),
     autoprefixer = require("gulp-autoprefixer"),
-    imagemin = require("gulp-imagemin");
+    imagemin = require("gulp-imagemin"),
+    sourcemaps = require("gulp-sourcemaps");
 
 // Cleans the dist directory
 gulp.task("clean", () => {
@@ -22,6 +23,7 @@ gulp.task("clean", () => {
 // Compiles SASS files and produces a minified style.min.css
 gulp.task("sass", () => {
     return gulp.src("./src/sass/*.scss")
+    .pipe(sourcemaps.init())
     .pipe(sass({
         outputStyle: "compressed"
     })
@@ -34,18 +36,21 @@ gulp.task("sass", () => {
         cascade: false
     }))
     .pipe(rename("style.min.css"))
+    .pipe(sourcemaps.write(""))
     .pipe(gulp.dest("./dist/css/"));
 });
 
 // Minifies JS
 gulp.task("js-compress", () => {
     return gulp.src("./src/js/app.js")
+    .pipe(sourcemaps.init())
     .pipe(uglify())
     .on("error", notify.onError({
         title: "JS Minification Error",
         message: "<%= error.message %>"
     }))
     .pipe(rename("app.min.js"))
+    .pipe(sourcemaps.write(""))
     .pipe(gulp.dest("./dist/js/"));
 });
 
