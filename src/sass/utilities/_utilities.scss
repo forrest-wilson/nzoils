@@ -9,6 +9,12 @@
     src: url("../fonts/beyond_the_mountains/beyond_the_mountains.ttf");
 }
 
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto/Roboto-Regular.ttf"),
+         url("../fonts/Roboto/Roboto-Bold.ttf");
+}
+
 .clearfix:after {
     content: "";
     display: table;

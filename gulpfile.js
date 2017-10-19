@@ -141,6 +141,7 @@ gulp.task("minify-css", () => {
         title: "CSS Minification Error",
         message: "<%= error.message %>"
     })))
+    .pipe(replace('@font-face{font-family:"Roboto";src:url("../fonts/Roboto/Roboto-Regular.ttf"),url("../fonts/Roboto/Roboto-Bold.ttf")}', ''))
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("./dist/css/"));
 });
@@ -160,7 +161,7 @@ gulp.task("minify-html", () => {
         collapseWhitespace: true,
         removeComments: true
     }))
-    .pipe(replace('<link rel="stylesheet" type="application/x-font-ttf" href="fonts/Roboto/Roboto-Light.ttf"><link rel="stylesheet" type="application/x-font-ttf" href="fonts/Roboto/Roboto-Bold.ttf">', '<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">'))
+    .pipe(replace('<link rel="stylesheet" type="application/x-font-ttf" href="fonts/Roboto/Roboto-Regular.ttf"><link rel="stylesheet" type="application/x-font-ttf" href="fonts/Roboto/Roboto-Bold.ttf">', '<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">'))
     .pipe(replace('css/normalize.css', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css'))
     .pipe(replace('js/jquery.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'))
     .pipe(replace('style.css', 'style.min.css'))
