@@ -24,7 +24,7 @@ npm install
 
 This will install all dependencies and devDependencies required to build and run this project.
 
-### Building the Dist
+### Building the Temp folder for Development
 
 Open a terminal window and run the below command.
 
@@ -32,9 +32,21 @@ Open a terminal window and run the below command.
 npm run start
 ```
 
-This should build the project and create a 'dist' folder where the compiled code is saved. Terminal will continue to listen for any changes made to files in the 'src' directory and re-build whenever anything is saved.
+This should build the project and create a 'temp' folder where the compiled code is saved. Terminal will continue to listen for any changes made to files in the 'src' directory and re-build whenever anything is saved.
 
-**Note:** The 'dist' folder is **NOT** to be added to the repo.
+**Note:** The 'temp' folder is **NOT** to be added to the repo.
+
+### Building the Dist folder for Production
+
+Run the below command when you are ready to distribute the current version of the site.
+
+```
+npm run build
+```
+
+This will rebuild the 'temp' folder and create the 'dist' folder containing all files ready for deployment.
+
+**Note:** Please ensure all features work by running the 'npm run start' command before deploying the 'dist' folder to any live servers.
 
 ### Updating after new node module installs
 
