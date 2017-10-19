@@ -233,14 +233,30 @@
         }
     }
 
-    .media {
-        .videos {
-            img {
-                max-width: 100%;
-                padding-bottom: 10px;
+    
+        .media {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .inner{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction:column;
+            
+                .videos {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap:wrap;
+                    iframe {
+                        max-width: 100%;
+                        margin: 10px;
+                        padding-bottom: 10px;
+                    }
+                }
             }
         }
-    }
 
     .distributor {
         margin-bottom: 25px!important;
