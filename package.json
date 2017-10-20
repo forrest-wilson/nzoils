@@ -31,7 +31,6 @@
     "run-sequence": "2.2.0"
   },
   "dependencies": {
-    "blazy": "1.8.2",
     "jquery": "3.2.1",
     "normalize.css": "7.0.0"
   }
