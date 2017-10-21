@@ -2,7 +2,10 @@ $(document).ready(function() {
     // Variable Declarations
     var isNavOpen = false,
         transitionTime = 400,
-        $htmlBody = $("html, body");
+        $htmlBody = $("html, body"),
+        bLazy = new Blazy({
+            width: 700 // Max width
+        });
 
     // Closes the mobile navigation
     function closeNav() {
@@ -102,9 +105,5 @@ $(document).ready(function() {
     // Quick links click events
     $("#contact .internal li").click(function() {
         scrollNav(this);
-    });
-
-    var bLazy = new Blazy({
-        width: 700 // Max width
     });
 });
