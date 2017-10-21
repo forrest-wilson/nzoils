@@ -92,4 +92,6 @@ $(document).ready(function() {
     $("#contact .internal li").click(function() {
         scrollNav(this);
     });
+
+    var bLazy = new Blazy();
 });

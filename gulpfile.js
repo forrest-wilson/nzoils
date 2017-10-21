@@ -57,7 +57,13 @@ gulp.task("js-copy", () => {
 // Copy minified jQuery from node_modules
 gulp.task("jquery-copy", () => {
     return gulp.src("./node_modules/jquery/dist/jquery.min.js")
-    .pipe(gulp.dest("./temp/js"))
+    .pipe(gulp.dest("./temp/js/"));
+});
+
+// Copies the bLazy library to the temp folder
+gulp.task("bLazy-copy", () => {
+    return gulp.src("./node_modules/blazy/blazy.min.js")
+    .pipe(gulp.dest("./temp/js/"));
 });
 
 // Copies HTML to the temp folder
@@ -113,7 +119,7 @@ gulp.task("reload-browser", () => {
 
 // Builds the temp folder
 gulp.task("build:temp", (callback) => {
-    runSequence("clean", "normalize-copy", "sass-to-css", "jquery-copy", "js-copy", "html-copy", "image-copy", "font-copy", "favicon", "reload-browser", callback);
+    runSequence("clean", "normalize-copy", "sass-to-css", "jquery-copy", "js-copy", "bLazy-copy", "html-copy", "image-copy", "font-copy", "favicon", "reload-browser", callback);
 });
 
 // The initial task that is called
