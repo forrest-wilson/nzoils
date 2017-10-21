@@ -72,17 +72,21 @@ $(document).ready(function() {
 
     // Shows the overlay depending on which product is clicked
     $(".product-item").click(function() {
-        var $href = $(this).children("a").attr("href");
+        var $href = $(this).children("a").attr("href"),
+            $el = $($href),
+            parsedHref = $href.replace("#", "");
 
         $(this).each(function() {
-            $($href).fadeIn(transitionTime);
+            $el.load("ajax/modal-popups/" + parsedHref + ".html");
+            $el.fadeIn(transitionTime);
         });
 
         event.preventDefault();
     });
 
-    // Dismisses the product overlay
-    $(".fixed-close").click(function() {
+    // Dismisses the product overlay.
+    // This method works with AJAX and a dynamic DOM.
+    $(document).on("click", ".fixed-close", function() {
         $(this).parent().parent().fadeOut(transitionTime);
 
         event.preventDefault();
