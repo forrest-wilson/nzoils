@@ -172,6 +172,7 @@ gulp.task("minify-html", () => {
     .pipe(replace('js/jquery.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'))
     .pipe(replace('style.css', 'style.min.css'))
     .pipe(replace('app.js', 'app.min.js'))
+    .pipe(replace('js/blazy.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js'))
     .pipe(gulp.dest("./dist/"));
 });
 
