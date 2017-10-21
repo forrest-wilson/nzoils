@@ -73,11 +73,16 @@ $(document).ready(function() {
     // Shows the overlay depending on which product is clicked
     $(".product-item").click(function() {
         var $href = $(this).children("a").attr("href"),
-            $el = $($href),
-            parsedHref = $href.replace("#", "");
+            $el = $("#productModal"),
+            $parsedHref = $href.replace("#", "");
 
         $(this).each(function() {
-            $el.load("ajax/modal-popups/" + parsedHref + ".html");
+            var url = "ajax/modal-popups/" + $parsedHref + ".html";
+
+            $.get(url, function(data) {
+                $el.children(".inner").append(data);
+            });
+
             $el.fadeIn(transitionTime);
         });
 
@@ -86,8 +91,10 @@ $(document).ready(function() {
 
     // Dismisses the product overlay.
     // This method works with AJAX and a dynamic DOM.
-    $(document).on("click", ".fixed-close", function() {
-        $(this).parent().parent().fadeOut(transitionTime);
+    $(".product-info").on("click", ".fixed-close", function() {
+        $(this).parent().parent().fadeOut(transitionTime, function() {
+            $(this).children(".inner").children("article").remove();
+        });
 
         event.preventDefault();
     });
@@ -97,5 +104,7 @@ $(document).ready(function() {
         scrollNav(this);
     });
 
-    var bLazy = new Blazy();
+    var bLazy = new Blazy({
+        width: 700 // Max width
+    });
 });
