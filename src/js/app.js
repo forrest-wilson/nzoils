@@ -10,7 +10,7 @@ $(document).ready(function() {
     // Closes the mobile navigation
     function closeNav() {
         $("#hamburgerToggle").removeClass("is-active-hamburger");
-        document.getElementById("mobileNav").style.width = "0";
+        $("#mobileNav").css("width", "0");
         $("#navOverlay").fadeOut(transitionTime);
 
         $("body").removeClass("stop-scroll");
@@ -21,7 +21,7 @@ $(document).ready(function() {
     // Opens the mobile navigation
     function openNav() {
         $("#hamburgerToggle").addClass("is-active-hamburger");
-        document.getElementById("mobileNav").style.width = "180px";
+        $("#mobileNav").css("width", "180px");
         $("#navOverlay").fadeIn(transitionTime);
 
         $("body").addClass("stop-scroll");
