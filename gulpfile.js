@@ -162,7 +162,7 @@ gulp.task("minify-js", () => {
 
 // Minifies the HTML code and replaces local links with CDN links
 gulp.task("minify-html", () => {
-    return gulp.src("./temp/*.html")
+    return gulp.src("./temp/**/*.html")
     .pipe(htmlmin({
         collapseWhitespace: true,
         removeComments: true
