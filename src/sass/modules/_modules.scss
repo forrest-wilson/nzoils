@@ -147,6 +147,10 @@
             .infused-catergory,
             .balsamic-catergory{
                 margin:20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction:column;
             }
             .product-title {
                 border-radius: $borderRadius;
@@ -159,15 +163,19 @@
                 }
             }
             .avocado-title {
+                max-width: 550px;
                 background-color: $avocadoSectionColor;
             }
             .olive-title {
+                max-width: 550px;
                 background-color: $oliveSectionColor;
             }
             .infused-title {
+                max-width: 550px;
                 background-color: $infusedSectionColor;
             }
             .balsamic-title {
+                max-width: 550px;
                 background-color: $balsamicSectionColor;
             }
 
