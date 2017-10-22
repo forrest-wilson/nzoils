@@ -4,21 +4,17 @@
 
 // Tablet Queries
 @media screen and (min-width: 700px) {
-    .distributors {
-        .inner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+    .distributors > .inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+        article:first-child {
+            grid-column: 1/3;
+        }
 
-            article:first-child {
-                grid-column: 1/3;
-            }
-
-            .distributor {
-                padding: 10px;
-
-                img {
-                    max-height: 150px;
-                }
+        .distributor {
+            img {
+                max-height: 150px;
             }
         }
     }
@@ -31,7 +27,7 @@
 
 @media screen and (min-width: 800px) {
     .mobile-nav {
-        
+
     }
 }
 
