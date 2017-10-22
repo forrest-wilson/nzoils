@@ -156,6 +156,7 @@
                 align-items: center;
                 flex-direction:column;
             }
+
             .product-title {
                 border-radius: $borderRadius;
                 text-align: center;
@@ -166,18 +167,22 @@
                     padding: 16px;
                 }
             }
+
             .avocado-title {
                 max-width: 550px;
                 background-color: $avocadoSectionColor;
             }
+
             .olive-title {
                 max-width: 550px;
                 background-color: $oliveSectionColor;
             }
+
             .infused-title {
                 max-width: 550px;
                 background-color: $infusedSectionColor;
             }
+
             .balsamic-title {
                 max-width: 550px;
                 background-color: $balsamicSectionColor;
@@ -209,12 +214,15 @@
                 .avocado-product{
                     border: solid 4px $avocadoSectionColor;
                 }
+
                 .olive-product{
                     border: solid 4px $oliveSectionColor;
                 }
+
                 .infused-product{
                     border: solid 4px $infusedSectionColor;
                 }
+                
                 .balsamic-product{
                     border: solid 4px $balsamicSectionColor;
                 }
