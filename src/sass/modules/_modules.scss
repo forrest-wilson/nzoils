@@ -168,23 +168,26 @@
                 }
             }
 
-            .avocado-title {
+            .avocado-title,
+            .olive-title,
+            .infused-title,
+            .balsamic-title {
                 max-width: 550px;
+            }
+
+            .avocado-title {
                 background-color: $avocadoSectionColor;
             }
 
             .olive-title {
-                max-width: 550px;
                 background-color: $oliveSectionColor;
             }
 
             .infused-title {
-                max-width: 550px;
                 background-color: $infusedSectionColor;
             }
 
             .balsamic-title {
-                max-width: 550px;
                 background-color: $balsamicSectionColor;
             }
 
