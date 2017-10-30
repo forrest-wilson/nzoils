@@ -67,9 +67,7 @@ This project uses the following libraries:
 
 ## Workflow Bugs
 
-* Changing branches requires you to re-run
-
-```npm run start```
+* Changing branches requires you to re-run ```npm run start``` as the gulpfile.js is not automatically reloaded upon branch change.
 
 ## Contributors
 
