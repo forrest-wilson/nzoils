@@ -65,6 +65,12 @@ This project uses the following libraries:
 * [jQuery v3.2.1](https://jquery.com/)
 * [Normalize v7.0.0](https://necolas.github.io/normalize.css/)
 
+## Workflow Bugs
+
+* Changing branches requires you to re-run
+
+```npm run start```
+
 ## Contributors
 
 * [Florence Lo](https://github.com/fpwl) - Lead
