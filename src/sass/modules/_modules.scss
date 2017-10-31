@@ -164,6 +164,11 @@
     }
 
     .our-products {
+
+        .desktop-product{
+            display: none;
+        }
+
         .mobile-product {
             .avocado-catergory, 
             .olive-catergory, 
@@ -186,30 +191,7 @@
                     padding: 16px;
                 }
             }
-
-            .avocado-title,
-            .olive-title,
-            .infused-title,
-            .balsamic-title {
-                max-width: 550px;
-            }
-
-            .avocado-title {
-                background-color: $avocadoSectionColor;
-            }
-
-            .olive-title {
-                background-color: $oliveSectionColor;
-            }
-
-            .infused-title {
-                background-color: $infusedSectionColor;
-            }
-
-            .balsamic-title {
-                background-color: $balsamicSectionColor;
-            }
-
+            
             .product-wrapper{
                 display: flex;
                 flex-direction: row;
@@ -233,25 +215,49 @@
                         width:100%;
                     }
                 }
-
-                .avocado-product {
-                    border: solid 4px $avocadoSectionColor;
-                }
-
-                .olive-product {
-                    border: solid 4px $oliveSectionColor;
-                }
-
-                .infused-product {
-                    border: solid 4px $infusedSectionColor;
-                }
-                
-                .balsamic-product {
-                    border: solid 4px $balsamicSectionColor;
-                }
             }
         }
+
     }
+    .avocado-title,
+    .olive-title,
+    .infused-title,
+    .balsamic-title {
+        max-width: 550px;
+    }
+
+    .avocado-title {
+        background-color: $avocadoSectionColor;
+    }
+
+    .olive-title {
+        background-color: $oliveSectionColor;
+    }
+
+    .infused-title {
+        background-color: $infusedSectionColor;
+    }
+
+    .balsamic-title {
+        background-color: $balsamicSectionColor;
+    }
+
+    .avocado-product {
+        border: solid 4px $avocadoSectionColor;
+    }
+
+    .olive-product {
+        border: solid 4px $oliveSectionColor;
+    }
+
+    .infused-product {
+        border: solid 4px $infusedSectionColor;
+    }
+    
+    .balsamic-product {
+        border: solid 4px $balsamicSectionColor;
+    }
+
 
     .about {
         .about-blurb {
