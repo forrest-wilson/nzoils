@@ -6,6 +6,7 @@ $(document).ready(function() {
         $windowWidth = $(window).width();
 
     updateWindowWidth();
+    updateActiveNavItem();
 
     // Logs the $windowWidth variable to the console
     function updateWindowWidth() {
@@ -126,5 +127,30 @@ $(document).ready(function() {
             // Closes the mobileNav if the viewport changes breakpoints
             closeNav();
         }
+    });
+
+    // Updates the active navigation item
+    function updateActiveNavItem() {
+        var $windowPos = $(window).scrollTop() + 101;
+
+        $("#desktopNav li a[href^=\"#\"]").each(function() {
+            var $currentLink = $(this);
+
+            if ($($currentLink.attr("href")).length > 0) {
+                var refEl = $($currentLink.attr("href"));
+
+                if (refEl.position().top <= $windowPos && (refEl.position().top + refEl.height() + $("#desktopNav").height()) > $windowPos) {
+                    $("#desktopNav li a").parent().removeClass("is-active-nav-item");
+                    $currentLink.parent().addClass("is-active-nav-item");
+                } else {
+                    $currentLink.parent().removeClass("is-active-nav-item");
+                }
+            }
+        });
+    }
+
+    // Does stuff on scrolling
+    $(window).on("scroll", function() {
+        updateActiveNavItem();
     });
 });
