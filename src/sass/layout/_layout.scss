@@ -9,8 +9,7 @@
 .heading-underline {
     height: 3px;
     background-color: $goldColor;
-    width: 90%;
+    max-width: 200px;
     margin: 0 auto;
     display: block;
-    border-radius: $borderRadius;
 }

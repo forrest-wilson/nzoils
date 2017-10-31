@@ -145,7 +145,7 @@
     }
 
     .our-products {
-        .product {
+        .mobile-product {
             .avocado-catergory, 
             .olive-catergory, 
             .infused-catergory,
@@ -251,6 +251,7 @@
         .about-images {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            padding-top: 20px;
 
             img {
                 width: 100%;
@@ -269,6 +270,11 @@
             justify-content: center;
             align-items: center;
             flex-direction:column;
+
+            article{
+                width:100%;
+            }
+
         
             .videos {
                 display: flex;
@@ -278,6 +284,7 @@
                 
                 iframe {
                     max-width: 100%;
+                    max-height: 100%;
                     margin: 10px;
                     padding-bottom: 10px;
                 }
@@ -286,7 +293,11 @@
     }
 
     .distributor {
-        margin-bottom: 25px!important;
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
         img {
             max-width: 100%;
@@ -305,19 +316,23 @@
         background-color: $secondaryDarkColor;
 
         article:last-child {
-            padding-bottom: 25px;
+        padding-bottom: 25px;
         }
 
-        article, .section-heading {
-            color: $lightTextColor!important;
+        article{
             text-align: center;
         }
+
+        .contact-seperator{
+            display: none;
+        }            
 
         .section-heading {
             color: $goldColor;
         }
 
         .enquiries-blurb {
+            color: $lightTextColor;
             max-width: 200px;
             margin-left: auto;
             margin-right: auto;
