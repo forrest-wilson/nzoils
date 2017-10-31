@@ -55,13 +55,65 @@
     }
 }
 
-@media screen and (min-width: 800px) {
-    .mobile-nav {
+// Desktop Queries
+@media screen and (min-width: 1000px) {
+    .header {
+        height: 100px;
 
+        .logo {
+            height: 100%;
+            margin: 0;
+            display: inline-block;
+        }
+
+        .mobile-header {
+            display: none;
+        }
+
+        .desktop-nav {
+            display: block;
+            float: right;
+
+            .nav-ul {
+                line-height: 100px;
+
+                li {
+                    display: inline-block;
+                    border-bottom: 2px solid rgba(0, 0, 0, 0.0);
+                    transition: $transitionSpeed;
+
+                    &:hover {
+                        border-bottom: 2px solid $goldColor;
+
+                        a {
+                            color: $goldColor;
+                        }
+                    }
+
+                    a {
+                        text-align: center;
+                        color: $silverColor;
+                        padding: 0 10px;
+                        font-weight: $paragraphFontWeight;
+                        display: block;
+                        line-height: 30px;
+                        transition: $transitionSpeed;
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+        padding-top: 100px;
+    }
+
+    .mobile-nav, .nav-overlay {
+        display: none;
     }
 }
 
-// Product height automation
+// Product height automation. May need to be deleted
 @media screen and (min-height: 800px) {
     .product-info {
         .inner {
