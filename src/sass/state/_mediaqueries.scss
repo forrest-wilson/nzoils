@@ -45,8 +45,18 @@
             float: right;
 
             .nav-ul {
+                line-height: 100px;
                 li {
                     display: inline-block;
+                    border-bottom: 2px solid rgba(0, 0, 0, 0.0);
+
+                    &:hover {
+                        border-bottom: 2px solid $goldColor;
+
+                        a {
+                            color: $goldColor;
+                        }
+                    }
 
                     a {
                         text-align: center;
@@ -54,7 +64,7 @@
                         padding: 0 10px;
                         font-weight: $paragraphFontWeight;
                         display: block;
-                        line-height: 100px;
+                        line-height: 40px;
                     }
                 }
             }
