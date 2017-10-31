@@ -2,7 +2,16 @@ $(document).ready(function() {
     // Variable Declarations
     var isNavOpen = false,
         transitionTime = 400,
-        $htmlBody = $("html, body");
+        $htmlBody = $("html, body"),
+        $windowWidth = $(window).width();
+
+    updateWindowWidth();
+
+    // Logs the $windowWidth variable to the console
+    function updateWindowWidth() {
+        $windowWidth = $(window).width();
+        console.log("Width: "+ $windowWidth + "px");
+    }
 
     // Closes the mobile navigation
     function closeNav() {
@@ -28,12 +37,13 @@ $(document).ready(function() {
 
     // Generic function that requires a specific HTML structure to work
     // $selector must be a li element with an 'a' as a child
-    function scrollNav($selector) {
+    // offset is the pixel value to offset the scroll by
+    function scrollNav($selector, offset) {
         var $href = $($selector).children("a").attr("href");
 
         $($selector).each(function() {
             $htmlBody.animate({
-                scrollTop: $($href).offset().top - 60
+                scrollTop: $($href).offset().top - offset
             }, transitionTime);
         });
 
@@ -62,12 +72,16 @@ $(document).ready(function() {
     // Navigation item click events
     $("#mobileNav li").click(function() {
         closeNav();
-        scrollNav(this);
+        scrollNav(this, 60);
     });
 
     // Closes the mobile nav when the overlay is clicked on
     $("#navOverlay").click(function() {
         closeNav();
+    });
+
+    $("#desktopNav li").click(function() {
+        scrollNav(this, 100);
     });
 
     // Shows the overlay depending on which product is clicked
@@ -90,6 +104,27 @@ $(document).ready(function() {
 
     // Quick links click events
     $("#contact .internal li").click(function() {
-        scrollNav(this);
+        var offset = 0;
+
+        if ($windowWidth >= 1000) {
+            offset = 100;
+        } else {
+            offset = 60;
+        }
+
+        scrollNav(this, offset);
+    });
+
+    // Does stuff on window resize
+    $(window).on("resize", function() {
+        // Updates the $windowWidth variable
+        updateWindowWidth();
+
+        // Run this block of code if the window width is greater or equal to 1000px
+        if ($windowWidth >= 1000) {
+
+            // Closes the mobileNav if the viewport changes breakpoints
+            closeNav();
+        }
     });
 });
