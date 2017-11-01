@@ -118,6 +118,30 @@
 
     .main {
         padding-top: 100px;
+
+        .slideshow-section-wrapper {
+            height: calc(100vh - 100px);
+            position: relative;
+
+            .slideshow-section {
+                .mobile-slideshow {
+                    display: none;
+                }
+    
+                .desktop-slideshow {
+                    display: none;
+                    max-height: 800px;
+                    position: relative;
+                }
+            }
+
+            .oil-brand-links {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+        }
     }
 
     .mobile-nav, .nav-overlay {
