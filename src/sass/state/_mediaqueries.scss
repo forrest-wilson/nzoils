@@ -50,7 +50,6 @@
                     margin: 20px;
 
                     legend{
-                        text-align: center;
                         .product-title{
                             border-radius: $borderRadius;
                             text-align: center;
@@ -59,6 +58,33 @@
                             .blurb {
                                 margin: 0;
                                 padding: 16px;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .product-wrapper{
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        margin:15px;
+
+                        .product-item {
+                            // max-width: 120px;
+                            border-radius: $borderRadius;
+                            margin: 10px;
+                            padding:5px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                            overflow: hidden;
+
+                            .product-image {
+                                width:100%;
                             }
                         }
                     }
