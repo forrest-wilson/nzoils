@@ -126,6 +126,9 @@ $(document).ready(function() {
 
             // Closes the mobileNav if the viewport changes breakpoints
             closeNav();
+            toggleSlideshow(true);
+        } else {
+            toggleSlideshow(false);
         }
     });
 
@@ -153,4 +156,17 @@ $(document).ready(function() {
     $(window).on("scroll", function() {
         updateActiveNavItem();
     });
+
+    $("#slides").slidesjs({
+        // width: 940,
+        // height: 500
+    });
+
+    function toggleSlideshow(bool) {
+        if (bool) {
+            $("#slides").show();
+        } else {
+            $("#slides").hide();
+        }
+    }
 });
