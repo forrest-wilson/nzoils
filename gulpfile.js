@@ -60,11 +60,6 @@ gulp.task("jquery-copy", () => {
     .pipe(gulp.dest("./temp/js"))
 });
 
-gulp.task("slidesjs-copy", () => {
-    return gulp.src("./src/js/jquery.slides.min.js")
-    .pipe(gulp.dest("./temp/js"));
-});
-
 // Copies HTML to the temp folder
 gulp.task("html-copy", () => {
     return gulp.src('./src/**/*.html')
@@ -118,7 +113,7 @@ gulp.task("reload-browser", () => {
 
 // Builds the temp folder
 gulp.task("build:temp", (callback) => {
-    runSequence("clean", "normalize-copy", "sass-to-css", "jquery-copy", "js-copy", "slidesjs-copy", "html-copy", "image-copy", "font-copy", "favicon", "reload-browser", callback);
+    runSequence("clean", "normalize-copy", "sass-to-css", "jquery-copy", "js-copy", "html-copy", "image-copy", "font-copy", "favicon", "reload-browser", callback);
 });
 
 // The initial task that is called
@@ -171,7 +166,6 @@ gulp.task("minify-html", () => {
     .pipe(replace('js/jquery.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'))
     .pipe(replace('style.css', 'style.min.css'))
     .pipe(replace('app.js', 'app.min.js'))
-    .pipe(replace('js/jquery.slides.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/slidesjs/3.0/jquery.slides.min.js'))
     .pipe(gulp.dest("./dist/"));
 });
 
