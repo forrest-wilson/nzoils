@@ -103,18 +103,18 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
-    // Quick links click events
-    $("#contact .internal li").click(function() {
-        var offset = 0;
+    // // Quick links click events
+    // $("#contact .internal li").click(function() {
+    //     var offset = 0;
 
-        if ($windowWidth >= 1000) {
-            offset = 100;
-        } else {
-            offset = 60;
-        }
+    //     if ($windowWidth >= 1000) {
+    //         offset = 100;
+    //     } else {
+    //         offset = 60;
+    //     }
 
-        scrollNav(this, offset);
-    });
+    //     scrollNav(this, offset);
+    // });
 
     // Does stuff on window resize
     $(window).on("resize", function() {
