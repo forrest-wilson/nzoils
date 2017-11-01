@@ -48,6 +48,23 @@ gulp.task("sass-to-css", () => {
     .pipe(gulp.dest("./temp/css/"));
 });
 
+gulp.task("slick-carousel-copy", () => {
+    gulp.src("./node_modules/slick-carousel/slick/fonts/*.*")
+    .pipe(gulp.dest("./temp/css/fonts"));
+
+    gulp.src("./node_modules/slick-carousel/slick/slick.css")
+    .pipe(gulp.dest("./temp/css"));
+
+    gulp.src("./node_modules/slick-carousel/slick/slick-theme.css")
+    .pipe(gulp.dest("./temp/css"));
+
+    gulp.src("./node_modules/slick-carousel/slick/ajax-loader.gif")
+    .pipe(gulp.dest("./temp/css"));
+
+    gulp.src("./node_modules/slick-carousel/slick/slick.min.js")
+    .pipe(gulp.dest("./temp/js"));
+});
+
 // Copies JS to the temp folder
 gulp.task("js-copy", () => {
     return gulp.src("./src/js/app.js")
@@ -113,7 +130,7 @@ gulp.task("reload-browser", () => {
 
 // Builds the temp folder
 gulp.task("build:temp", (callback) => {
-    runSequence("clean", "normalize-copy", "sass-to-css", "jquery-copy", "js-copy", "html-copy", "image-copy", "font-copy", "favicon", "reload-browser", callback);
+    runSequence("clean", "normalize-copy", "sass-to-css", "slick-carousel-copy", "jquery-copy", "js-copy", "html-copy", "image-copy", "font-copy", "favicon", "reload-browser", callback);
 });
 
 // The initial task that is called
@@ -166,6 +183,9 @@ gulp.task("minify-html", () => {
     .pipe(replace('js/jquery.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'))
     .pipe(replace('style.css', 'style.min.css'))
     .pipe(replace('app.js', 'app.min.js'))
+    .pipe(replace("css/slick.css", "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"))
+    .pipe(replace("css/slick-theme.css", "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"))
+    .pipe(replace("js/slick.min.js", "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"))
     .pipe(gulp.dest("./dist/"));
 });
 
