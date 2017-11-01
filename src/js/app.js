@@ -157,11 +157,6 @@ $(document).ready(function() {
         updateActiveNavItem();
     });
 
-    $("#slides").slidesjs({
-        // width: 940,
-        // height: 500
-    });
-
     function toggleSlideshow(bool) {
         if (bool) {
             $("#slides").show();
