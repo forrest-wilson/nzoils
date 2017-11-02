@@ -7,6 +7,7 @@ $(document).ready(function() {
 
     updateWindowWidth();
     updateActiveNavItem();
+    toggleSlideshow(false);
 
     // Logs the $windowWidth variable to the console
     function updateWindowWidth() {
@@ -158,7 +159,7 @@ $(document).ready(function() {
     });
 
     function toggleSlideshow(bool) {
-        if (bool) {
+        if (bool || $windowWidth >= 1000) {
             $("#slides").show();
         } else {
             $("#slides").hide();
