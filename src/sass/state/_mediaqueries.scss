@@ -71,6 +71,7 @@
 @media screen and (min-width: 1000px) {
     .header {
         height: 100px;
+        transition: $transitionSpeed;
 
         .logo {
             height: 100%;
@@ -88,6 +89,7 @@
 
             .nav-ul {
                 line-height: 100px;
+                transition: $transitionSpeed;
 
                 li {
                     display: inline-block;

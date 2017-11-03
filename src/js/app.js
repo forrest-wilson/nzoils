@@ -3,11 +3,14 @@ $(document).ready(function() {
     var isNavOpen = false,
         transitionTime = 400,
         $htmlBody = $("html, body"),
-        $windowWidth = $(window).width();
+        $windowWidth = $(window).width(),
+        $windowHeight = $(window).height(),
+        $fromTop = $(window).scrollTop();
 
     updateWindowWidth();
     updateActiveNavItem();
     toggleSlideshow(false);
+    navigationHeightChange();
 
     // Logs the $windowWidth variable to the console
     function updateWindowWidth() {
@@ -83,7 +86,11 @@ $(document).ready(function() {
     });
 
     $("#desktopNav li").click(function() {
-        scrollNav(this, 100);
+        if (($fromTop + 101) > $windowHeight) {
+            scrollNav(this, 75);
+        } else {
+            scrollNav(this, 100);
+        }
     });
 
     // Shows the overlay depending on which product is clicked
@@ -121,6 +128,7 @@ $(document).ready(function() {
     $(window).on("resize", function() {
         // Updates the $windowWidth variable
         updateWindowWidth();
+        navigationHeightChange();
 
         // Run this block of code if the window width is greater or equal to 1000px
         if ($windowWidth >= 1000) {
@@ -156,6 +164,7 @@ $(document).ready(function() {
     // Does stuff on scrolling
     $(window).on("scroll", function() {
         updateActiveNavItem();
+        navigationHeightChange();
     });
 
     function toggleSlideshow(bool) {
@@ -176,4 +185,27 @@ $(document).ready(function() {
         prevArrow: "<i class=\"slick-prev fa fa-angle-left\">Previous</i>",
         nextArrow: "<i class=\"slick-next fa fa-angle-right\">Right</i>"
     });
+
+    function navigationHeightChange() {
+        $fromTop = $(window).scrollTop();
+        $windowHeight = $(window).height();
+
+        if (($fromTop + 100) > $windowHeight) {
+            $("#header").css({
+                height: "75px"
+            });
+
+            $("#desktopNav .nav-ul").css({
+                "line-height": "75px"
+            });
+        } else {
+            $("#header").css({
+                height: "100px"
+            });
+
+            $("#desktopNav .nav-ul").css({
+                "line-height": "100px"
+            });
+        }
+    }
 });
