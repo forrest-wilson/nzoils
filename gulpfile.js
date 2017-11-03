@@ -65,6 +65,14 @@ gulp.task("slick-carousel-copy", () => {
     .pipe(gulp.dest("./temp/js"));
 });
 
+gulp.task("font-awesome-copy", () => {
+    gulp.src("./node_modules/font-awesome/css/font-awesome.css")
+    .pipe(gulp.dest("./temp/css/"));
+
+    gulp.src("./node_modules/font-awesome/fonts/*.*")
+    .pipe(gulp.dest("./temp/fonts"));
+});
+
 // Copies JS to the temp folder
 gulp.task("js-copy", () => {
     return gulp.src("./src/js/app.js")
@@ -130,7 +138,7 @@ gulp.task("reload-browser", () => {
 
 // Builds the temp folder
 gulp.task("build:temp", (callback) => {
-    runSequence("clean", "normalize-copy", "sass-to-css", "slick-carousel-copy", "jquery-copy", "js-copy", "html-copy", "image-copy", "font-copy", "favicon", "reload-browser", callback);
+    runSequence("clean", "normalize-copy", "sass-to-css", "slick-carousel-copy", "font-awesome-copy", "jquery-copy", "js-copy", "html-copy", "image-copy", "font-copy", "favicon", "reload-browser", callback);
 });
 
 // The initial task that is called
@@ -186,6 +194,7 @@ gulp.task("minify-html", () => {
     .pipe(replace("css/slick.css", "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"))
     .pipe(replace("css/slick-theme.css", "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"))
     .pipe(replace("js/slick.min.js", "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"))
+    .pipe(replace("css/font-awesome.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"))
     .pipe(gulp.dest("./dist/"));
 });
 
