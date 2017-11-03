@@ -134,6 +134,7 @@
                 .desktop-slideshow {
                     height: 100%;
                     width: 100%;
+                    margin-bottom: 0px;
 
                     .slick-list, .slick-track {
                         height: 100%;
@@ -144,6 +145,7 @@
                         background-repeat: no-repeat;
                         background-position: 50% 50%;
                         height: 100%;
+                        padding: 10px;
 
                         &:nth-child(1) {
                             background-image: url("../img/slideshow/slideshow-bg-1.png");
@@ -159,6 +161,18 @@
                     }
 
                     // Slick defaults configuration
+                    .slick-prev, .slick-next {
+                        z-index: 500;
+                    }
+
+                    .slick-prev {
+                        left: 20px;
+                    }
+
+                    .slick-next {
+                        right: 20px;
+                    }
+
                     .slick-dots {
                         width: 100%;
                         position: absolute;
