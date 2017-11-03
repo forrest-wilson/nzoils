@@ -145,6 +145,7 @@
                         background-repeat: no-repeat;
                         background-position: 50% 50%;
                         height: 100%;
+                        padding: 0 85px; // Prevents any images from hiding behind the slideshow toggles
 
                         &:nth-child(1) {
                             background-image: url("../img/slideshow/slideshow-bg-1.png");
@@ -172,14 +173,37 @@
                                 max-width: 1200px;
                                 margin: 60px auto;
                             }
+                        }
+                    }
 
-                            // img {
-                            //     // @include positioning(absolute, 10px, 10px, $b: 10px);
-                            //     // max-height: 50%;
-                            //     // width: 100%;
-                            //     // display: block;
-                            //     // margin: 0 auto;
-                            // }
+                    .slide-one {
+                        .inner {
+                            img {
+                                width: calc(100% - 170px);
+                                padding: 100px 0;
+                                margin: 0 auto;
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .slide-two {
+                        .inner {
+                            img {
+                                height: 100%;
+                                padding: 100px 0;
+                            }
+                        }
+                    }
+
+                    .slide-three {
+                        .inner {
+                            img {
+                                height: 100%;
+                                padding: 100px 0;
+                                margin: 0 auto;
+                                display: block;
+                            }
                         }
                     }
 
@@ -207,10 +231,17 @@
                     .slick-dots {
                         width: 100%;
                         position: absolute;
-                        bottom: 20px;
+                        bottom: 0px;
                         left: 0;
                         z-index: 500;
                         text-align: center;
+                        line-height: 100px;
+                        background: linear-gradient(rgba(22, 22, 22, 0), rgba(22, 22, 22, 0.8));
+
+                        li button::before {
+                            color: $lightTextColor;
+                            font-size: 15px;
+                        }
                     }
                 }
             }
