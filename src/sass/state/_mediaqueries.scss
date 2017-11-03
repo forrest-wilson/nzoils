@@ -145,7 +145,6 @@
                         background-repeat: no-repeat;
                         background-position: 50% 50%;
                         height: 100%;
-                        padding: 10px;
 
                         &:nth-child(1) {
                             background-image: url("../img/slideshow/slideshow-bg-1.png");
@@ -158,11 +157,43 @@
                         &:nth-child(3) {
                             background-image: url("../img/slideshow/slideshow-bg-3.png");
                         }
+
+                        .inner {
+                            height: 100%;
+                            max-width: 1500px;
+                            margin: 0 auto;
+                            position: relative;
+                            padding: 0;
+
+                            .blurb {
+                                font-size: $slideshowFontSize;
+                                text-align: center;
+                                color: $lightTextColor;
+                                max-width: 1200px;
+                                margin: 60px auto;
+                            }
+
+                            // img {
+                            //     // @include positioning(absolute, 10px, 10px, $b: 10px);
+                            //     // max-height: 50%;
+                            //     // width: 100%;
+                            //     // display: block;
+                            //     // margin: 0 auto;
+                            // }
+                        }
                     }
 
                     // Slick defaults configuration
                     .slick-prev, .slick-next {
                         z-index: 500;
+                        width: auto;
+                        height: auto;
+
+                        &::before {
+                            font-size: 100px;
+                            font-family: 'FontAwesome';
+                            display: block;
+                        }
                     }
 
                     .slick-prev {
