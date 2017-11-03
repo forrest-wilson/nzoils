@@ -76,7 +76,8 @@
         .logo {
             height: 100%;
             margin: 0;
-            display: inline-block;
+            display: block;
+            position: absolute;
         }
 
         .mobile-header {
