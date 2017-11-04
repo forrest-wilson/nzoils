@@ -15,7 +15,6 @@ $(document).ready(function() {
     // Logs the $windowWidth variable to the console
     function updateWindowWidth() {
         $windowWidth = $(window).width();
-        console.log("Width: "+ $windowWidth + "px");
     }
 
     // Closes the mobile navigation

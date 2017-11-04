@@ -155,6 +155,7 @@
         .slideshow-section-wrapper {
             height: calc(100vh - 100px);
             position: relative;
+            min-height: 750px;
 
             .slideshow-section {
                 width: 100vw;
@@ -200,11 +201,12 @@
                             padding: 0;
 
                             .blurb {
-                                font-size: $slideshowFontSize;
+                                font-size: 50px;
                                 text-align: center;
                                 color: $lightTextColor;
-                                max-width: 1200px;
-                                margin: 60px auto;
+                                max-width: 750px;
+                                margin: 0 auto;
+                                padding-top: 60px;
                             }
                         }
                     }
@@ -212,10 +214,11 @@
                     .slide-one {
                         .inner {
                             img {
-                                width: calc(100% - 170px);
-                                padding: 100px 0;
-                                margin: 0 auto;
+                                width: 100%;
+                                max-width: 800px;
                                 display: block;
+                                @include positioning(absolute, $b: 100px, $l: 50%);
+                                transform: translateX(-50%);
                             }
                         }
                     }
@@ -224,7 +227,7 @@
                         .inner {
                             img {
                                 height: 100%;
-                                padding: 100px 0;
+                                padding: 50px 0 100px 0;
                             }
                         }
                     }
@@ -233,7 +236,7 @@
                         .inner {
                             img {
                                 height: 100%;
-                                padding: 100px 0;
+                                padding: 50px 0 100px 0;
                                 margin: 0 auto;
                                 display: block;
                             }
@@ -299,5 +302,11 @@
         .inner {
             height: auto;
         }
+    }
+}
+
+@media screen and (min-height: 1000px) {
+    .desktop-slideshow .inner .blurb {
+        font-size: 85px!important;
     }
 }
