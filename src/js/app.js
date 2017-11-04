@@ -206,5 +206,11 @@ $(document).ready(function() {
                 "line-height": "100px"
             });
         }
+
+        if ($windowWidth < 1000) {
+            $("#header").css({
+                "height": "60px"
+            });
+        }
     }
 });
