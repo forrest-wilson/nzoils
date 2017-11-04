@@ -8,9 +8,28 @@
     background-color: $primaryDarkColor;
     z-index: 1000;
 
+    .inner {
+        max-width: 1500px;
+        margin: 0 auto;
+        height: 100%;
+        padding: 0;
+    }
+
+    .mobile-header {
+        max-width: 1500px;
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
     .logo {
         display: block;
         margin: 0 auto;
+        height: 100%;
+        cursor: pointer;
     }
 
     .hamburger-toggle {
@@ -66,6 +85,11 @@
         article:last-child {
             margin-bottom: 0;
         }
+
+        .inner {
+            max-width: 1500px;
+            margin: 0 auto;
+        }
     }
 
     .slideshow-section {
@@ -111,7 +135,6 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                padding: 15px;
                 
                 a {
                     display: flex;
@@ -141,13 +164,23 @@
     }
 
     .our-products {
-        .product {
+
+        .desktop-product{
+            display: none;
+        }
+
+        .mobile-product {
             .avocado-catergory, 
             .olive-catergory, 
             .infused-catergory,
             .balsamic-catergory{
                 margin:20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction:column;
             }
+
             .product-title {
                 border-radius: $borderRadius;
                 text-align: center;
@@ -158,19 +191,7 @@
                     padding: 16px;
                 }
             }
-            .avocado-title {
-                background-color: $avocadoSectionColor;
-            }
-            .olive-title {
-                background-color: $oliveSectionColor;
-            }
-            .infused-title {
-                background-color: $infusedSectionColor;
-            }
-            .balsamic-title {
-                background-color: $balsamicSectionColor;
-            }
-
+            
             .product-wrapper{
                 display: flex;
                 flex-direction: row;
@@ -188,33 +209,63 @@
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
+                    cursor: pointer;
 
-                    .product-image{
+                    .product-image {
                         width:100%;
                     }
                 }
-
-                .avocado-product{
-                    border: solid 4px $avocadoSectionColor;
-                }
-                .olive-product{
-                    border: solid 4px $oliveSectionColor;
-                }
-                .infused-product{
-                    border: solid 4px $infusedSectionColor;
-                }
-                .balsamic-product{
-                    border: solid 4px $balsamicSectionColor;
-                }
             }
         }
+
     }
+    .avocado-title,
+    .olive-title,
+    .infused-title,
+    .balsamic-title {
+        max-width: 550px;
+    }
+
+    .avocado-title {
+        background-color: $avocadoSectionColor;
+    }
+
+    .olive-title {
+        background-color: $oliveSectionColor;
+    }
+
+    .infused-title {
+        background-color: $infusedSectionColor;
+    }
+
+    .balsamic-title {
+        background-color: $balsamicSectionColor;
+    }
+
+    .avocado-product {
+        border: solid 4px $avocadoSectionColor;
+    }
+
+    .olive-product {
+        border: solid 4px $oliveSectionColor;
+    }
+
+    .infused-product {
+        border: solid 4px $infusedSectionColor;
+    }
+    
+    .balsamic-product {
+        border: solid 4px $balsamicSectionColor;
+    }
+
 
     .about {
         .about-blurb {
             color: $primaryDarkColor;
             text-align: center;
             line-height: 25px;
+            max-width: 550px;
+            margin: 0 auto;
 
             .quote {
                 color: green; // Unsure what color to set this text to
@@ -223,9 +274,14 @@
             }
         }
 
+        .desktop-about-image {
+            display: none;
+        }
+
         .about-images {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            padding-top: 20px;
 
             img {
                 width: 100%;
@@ -234,32 +290,44 @@
     }
 
     
-        .media {
+    .media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .inner{
             display: flex;
             justify-content: center;
             align-items: center;
-            .inner{
+            flex-direction:column;
+
+            article{
+                width:100%;
+            }
+
+        
+            .videos {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                flex-direction:column;
-            
-                .videos {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-wrap:wrap;
-                    iframe {
-                        max-width: 100%;
-                        margin: 10px;
-                        padding-bottom: 10px;
-                    }
+                flex-wrap:wrap;
+                
+                iframe {
+                    max-width: 100%;
+                    max-height: 100%;
+                    margin: 10px;
+                    padding-bottom: 10px;
                 }
             }
         }
+    }
 
     .distributor {
-        margin-bottom: 25px!important;
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
         img {
             max-width: 100%;
@@ -278,19 +346,23 @@
         background-color: $secondaryDarkColor;
 
         article:last-child {
-            padding-bottom: 25px;
+        padding-bottom: 25px;
         }
 
-        article, .section-heading {
-            color: $lightTextColor!important;
+        article{
             text-align: center;
         }
+
+        .contact-seperator{
+            display: none;
+        }            
 
         .section-heading {
             color: $goldColor;
         }
 
         .enquiries-blurb {
+            color: $lightTextColor;
             max-width: 200px;
             margin-left: auto;
             margin-right: auto;

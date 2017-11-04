@@ -2,11 +2,334 @@
 //// Media Queries ////
 ///////////////////////
 
-// Product height automation
-@media screen and (min-height: 720px) {
+// Tablet Queries
+@media screen and (min-width: 700px) {
+    .aozora-bostock-logos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        
+         .bostock-logo-wrapper{
+            border-bottom: none;
+            border-right: solid 1px $primaryDarkColor;
+
+            .bostock-logo {
+                max-width: 60%;
+            }
+        }
+    }
+
+    .our-products{
+        .inner{
+            .mobile-product{
+                display: none;
+            }
+
+            .desktop-product{
+                display: block;
+
+                fieldset{
+                    margin: 20px;
+
+                    legend{
+                        .product-title{
+                            border-radius: $borderRadius;
+                            text-align: center;
+                            color: $lightTextColor;
+
+                            .blurb {
+                                margin: 0;
+                                padding: 16px;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .product-wrapper{
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        margin:15px;
+
+                        .product-item {
+                            // max-width: 120px;
+                            border-radius: $borderRadius;
+                            margin: 10px;
+                            padding:5px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                            overflow: hidden;
+
+                            .product-image {
+                                width:100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contact{
+        .inner{
+            display: flex;
+            justify-content: space-around;
+            
+            .contact-seperator{
+                align-self: center;
+                display: block;
+                background-color: $silverColor;
+                width: 2px;
+                height: 150px;
+            }
+
+        }
+    }
+}
+
+// Desktop Queries
+@media screen and (min-width: 1000px) {
+    .header {
+        height: 100px;
+        transition: $transitionSpeed;
+
+        .inner {
+            padding: 0 20px;
+        }
+
+        .logo {
+            height: 100%;
+            margin: 0;
+            display: block;
+            position: absolute;
+        }
+
+        .mobile-header {
+            display: none;
+        }
+
+        .desktop-nav {
+            display: block;
+            float: right;
+
+            .nav-ul {
+                line-height: 100px;
+                transition: $transitionSpeed;
+
+                li {
+                    display: inline-block;
+                    border-bottom: 2px solid rgba(0, 0, 0, 0.0);
+                    transition: $transitionSpeed;
+
+                    &:hover {
+                        border-bottom: 2px solid $goldColor;
+
+                        a {
+                            color: $goldColor;
+                        }
+                    }
+
+                    a {
+                        text-align: center;
+                        color: $silverColor;
+                        padding: 0 10px;
+                        font-weight: $paragraphFontWeight;
+                        display: block;
+                        line-height: 30px;
+                        transition: $transitionSpeed;
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+        padding-top: 100px;
+
+        .slideshow-section-wrapper {
+            height: calc(100vh - 100px);
+            position: relative;
+            min-height: 750px;
+
+            .slideshow-section {
+                width: 100vw;
+                height: calc(100% - 135.47px);
+
+                .mobile-slideshow {
+                    display: none;
+                }
+
+                .desktop-slideshow {
+                    height: 100%;
+                    width: 100%;
+                    margin-bottom: 0px;
+
+                    .slick-list, .slick-track {
+                        height: 100%;
+                    }
+
+                    .slide {
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: 50% 50%;
+                        height: 100%;
+                        padding: 0 85px; // Prevents any images from hiding behind the slideshow toggles
+
+                        &:nth-child(1) {
+                            background-image: url("../img/slideshow/slideshow-bg-1.jpg");
+                        }
+
+                        &:nth-child(2) {
+                            background-image: url("../img/slideshow/slideshow-bg-2.jpg");
+                        }
+
+                        &:nth-child(3) {
+                            background-image: url("../img/slideshow/slideshow-bg-3.jpg");
+                        }
+
+                        .inner {
+                            height: 100%;
+                            max-width: 1500px;
+                            margin: 0 auto;
+                            position: relative;
+                            padding: 0;
+
+                            .blurb {
+                                font-size: 50px;
+                                text-align: center;
+                                color: $lightTextColor;
+                                max-width: 750px;
+                                margin: 0 auto;
+                                padding-top: 60px;
+                            }
+                        }
+                    }
+
+                    .slide-one {
+                        .inner {
+                            img {
+                                width: 100%;
+                                max-width: 800px;
+                                display: block;
+                                @include positioning(absolute, $b: 100px, $l: 50%);
+                                transform: translateX(-50%);
+                            }
+                        }
+                    }
+
+                    .slide-two {
+                        .inner {
+                            img {
+                                height: 100%;
+                                padding: 50px 0 100px 0;
+                            }
+                        }
+                    }
+
+                    .slide-three {
+                        .inner {
+                            img {
+                                height: 100%;
+                                padding: 50px 0 100px 0;
+                                margin: 0 auto;
+                                display: block;
+                            }
+                        }
+                    }
+
+                    // Slick defaults configuration
+                    .slick-prev, .slick-next {
+                        z-index: 500;
+                        width: auto;
+                        height: auto;
+
+                        &::before {
+                            font-size: 100px;
+                            font-family: 'FontAwesome';
+                            display: block;
+                        }
+                    }
+
+                    .slick-prev {
+                        left: 20px;
+                    }
+
+                    .slick-next {
+                        right: 20px;
+                    }
+
+                    .slick-dots {
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0;
+                        z-index: 500;
+                        text-align: center;
+                        line-height: 100px;
+                        background: linear-gradient(rgba(22, 22, 22, 0), rgba(22, 22, 22, 0.8));
+
+                        li button::before {
+                            color: $lightTextColor;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+
+            .oil-brand-links {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+
+    .mobile-nav, .nav-overlay {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .about {
+        .inner {
+            display: grid!important;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+
+            .section-title {
+                grid-column: 1/4;
+            }
+        }
+    }
+
+    .desktop-about-image {
+        display: block!important;
+        height: 100%;
+    }
+
+    .about-images {
+        display: none!important;
+    }
+}
+
+// Product height automation. May need to be deleted
+@media screen and (min-height: 800px) {
     .product-info {
         .inner {
             height: auto;
         }
+    }
+}
+
+@media screen and (min-height: 1000px) {
+    .desktop-slideshow .inner .blurb {
+        font-size: 85px!important;
     }
 }

@@ -21,3 +21,11 @@
 .stop-scroll {
     overflow: hidden;
 }
+
+.is-active-nav-item {
+    border-bottom: 2px solid $goldColor!important;
+
+    a {
+        color: $goldColor!important;
+    }
+}
