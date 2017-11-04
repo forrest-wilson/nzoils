@@ -97,11 +97,17 @@
 @media screen and (min-width: 1000px) {
     .header {
         height: 100px;
+        transition: $transitionSpeed;
+
+        .inner {
+            padding: 0 20px;
+        }
 
         .logo {
             height: 100%;
             margin: 0;
-            display: inline-block;
+            display: block;
+            position: absolute;
         }
 
         .mobile-header {
@@ -114,6 +120,7 @@
 
             .nav-ul {
                 line-height: 100px;
+                transition: $transitionSpeed;
 
                 li {
                     display: inline-block;
@@ -144,6 +151,141 @@
 
     .main {
         padding-top: 100px;
+
+        .slideshow-section-wrapper {
+            height: calc(100vh - 100px);
+            position: relative;
+
+            .slideshow-section {
+                width: 100vw;
+                height: calc(100% - 135.47px);
+
+                .mobile-slideshow {
+                    display: none;
+                }
+
+                .desktop-slideshow {
+                    height: 100%;
+                    width: 100%;
+                    margin-bottom: 0px;
+
+                    .slick-list, .slick-track {
+                        height: 100%;
+                    }
+
+                    .slide {
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: 50% 50%;
+                        height: 100%;
+                        padding: 0 85px; // Prevents any images from hiding behind the slideshow toggles
+
+                        &:nth-child(1) {
+                            background-image: url("../img/slideshow/slideshow-bg-1.png");
+                        }
+
+                        &:nth-child(2) {
+                            background-image: url("../img/slideshow/slideshow-bg-2.png");
+                        }
+
+                        &:nth-child(3) {
+                            background-image: url("../img/slideshow/slideshow-bg-3.png");
+                        }
+
+                        .inner {
+                            height: 100%;
+                            max-width: 1500px;
+                            margin: 0 auto;
+                            position: relative;
+                            padding: 0;
+
+                            .blurb {
+                                font-size: $slideshowFontSize;
+                                text-align: center;
+                                color: $lightTextColor;
+                                max-width: 1200px;
+                                margin: 60px auto;
+                            }
+                        }
+                    }
+
+                    .slide-one {
+                        .inner {
+                            img {
+                                width: calc(100% - 170px);
+                                padding: 100px 0;
+                                margin: 0 auto;
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .slide-two {
+                        .inner {
+                            img {
+                                height: 100%;
+                                padding: 100px 0;
+                            }
+                        }
+                    }
+
+                    .slide-three {
+                        .inner {
+                            img {
+                                height: 100%;
+                                padding: 100px 0;
+                                margin: 0 auto;
+                                display: block;
+                            }
+                        }
+                    }
+
+                    // Slick defaults configuration
+                    .slick-prev, .slick-next {
+                        z-index: 500;
+                        width: auto;
+                        height: auto;
+
+                        &::before {
+                            font-size: 100px;
+                            font-family: 'FontAwesome';
+                            display: block;
+                        }
+                    }
+
+                    .slick-prev {
+                        left: 20px;
+                    }
+
+                    .slick-next {
+                        right: 20px;
+                    }
+
+                    .slick-dots {
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0;
+                        z-index: 500;
+                        text-align: center;
+                        line-height: 100px;
+                        background: linear-gradient(rgba(22, 22, 22, 0), rgba(22, 22, 22, 0.8));
+
+                        li button::before {
+                            color: $lightTextColor;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+
+            .oil-brand-links {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+        }
     }
 
     .mobile-nav, .nav-overlay {

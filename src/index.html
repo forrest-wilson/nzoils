@@ -17,6 +17,9 @@
 
     <!-- Stylesheet Links -->
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
@@ -47,25 +50,47 @@
     </header>
 
     <main id="main" class="main">
-        <section class="slideshow-section">
-            <article class="mobile-slideshow">
-                <div class="inner">
-                    <h1 class="blurb">EXTRA VIRGIN NEW ZEALAND OIL AT ITS FINEST</h1>
-                    <img src="img/products/all-products.png" alt="All Product Bottles">
-                </div>
-            </article>
-        </section>
+        <div class="slideshow-section-wrapper">
+            <section class="slideshow-section">
+                <article class="mobile-slideshow">
+                    <div class="inner">
+                        <h1 class="blurb">EXTRA VIRGIN NEW ZEALAND OIL AT ITS FINEST</h1>
+                        <img src="img/products/all-products.png" alt="All Product Bottles">
+                    </div>
+                </article>
 
-        <section class="oil-brand-links section">
-            <article class="aozora-bostock-logos">
-                <div class="bostock-logo-wrapper inner">
-                    <a href="http://www.bostock.nz/" target="_blank"><img class="bostock-logo" src="img/logo/BostockLogo.png" alt="BostockLogo"></a>
-                </div>
-                <div class="aozora-logo-wrapper inner">
-                    <a href="http://www.aozora.co.nz/" target="_blank"><img class="aozora-logo" src="img/logo/AozoraLogo.png" alt="aozoraLogo"></a>
-                </div>
-            </article>
-        </section>
+                <article id="slides" class="desktop-slideshow">
+                    <div class="slide slide-one">
+                        <div class="inner">
+                            <h1 class="blurb">EXTRA VIRGIN NEW ZEALAND OIL AT ITS FINEST</h1>
+                            <img src="img/products/all-products.png" alt="All Product Bottles">
+                        </div>
+                    </div>
+
+                    <div class="slide slide-two">
+                        <div class="inner">
+                            <img src="img/products/avocado-products.png" alt="Avocado Product Bottles">
+                        </div>
+                    </div>
+                    <div class="slide slide-three">
+                        <div class="inner">
+                            <img src="img/products/BostockOliveOil.png" alt="Avocado Product Bottles">
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="oil-brand-links section">
+                <article class="aozora-bostock-logos">
+                    <div class="bostock-logo-wrapper inner">
+                        <a href="http://www.bostock.nz/" target="_blank"><img class="bostock-logo" src="img/logo/BostockLogo.png" alt="BostockLogo"></a>
+                    </div>
+                    <div class="aozora-logo-wrapper inner">
+                        <a href="http://www.aozora.co.nz/" target="_blank"><img class="aozora-logo" src="img/logo/AozoraLogo.png" alt="aozoraLogo"></a>
+                    </div>
+                </article>
+            </section>
+        </div>
 
         <section id="products" class="our-products section">
             <div class="inner">
@@ -454,6 +479,7 @@
 
     <!-- JS Scripts -->
     <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
