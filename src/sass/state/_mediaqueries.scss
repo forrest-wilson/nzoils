@@ -73,6 +73,10 @@
         height: 100px;
         transition: $transitionSpeed;
 
+        .inner {
+            padding: 0 20px;
+        }
+
         .logo {
             height: 100%;
             margin: 0;
