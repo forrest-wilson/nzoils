@@ -182,15 +182,15 @@
                         padding: 0 85px; // Prevents any images from hiding behind the slideshow toggles
 
                         &:nth-child(1) {
-                            background-image: url("../img/slideshow/slideshow-bg-1.png");
+                            background-image: url("../img/slideshow/slideshow-bg-1.jpg");
                         }
 
                         &:nth-child(2) {
-                            background-image: url("../img/slideshow/slideshow-bg-2.png");
+                            background-image: url("../img/slideshow/slideshow-bg-2.jpg");
                         }
 
                         &:nth-child(3) {
-                            background-image: url("../img/slideshow/slideshow-bg-3.png");
+                            background-image: url("../img/slideshow/slideshow-bg-3.jpg");
                         }
 
                         .inner {
