@@ -296,6 +296,29 @@
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .about {
+        .inner {
+            display: grid!important;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+
+            .section-title {
+                grid-column: 1/4;
+            }
+        }
+    }
+
+    .desktop-about-image {
+        display: block!important;
+        height: 100%;
+    }
+
+    .about-images {
+        display: none!important;
+    }
+}
+
 // Product height automation. May need to be deleted
 @media screen and (min-height: 800px) {
     .product-info {

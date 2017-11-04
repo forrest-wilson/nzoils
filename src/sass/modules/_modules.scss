@@ -274,6 +274,10 @@
             }
         }
 
+        .desktop-about-image {
+            display: none;
+        }
+
         .about-images {
             display: grid;
             grid-template-columns: 1fr 1fr;
