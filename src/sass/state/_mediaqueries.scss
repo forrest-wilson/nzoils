@@ -4,13 +4,13 @@
 
 // Tablet Queries
 @media screen and (min-width: 700px) {
-    .aozora-bostock-logos{
+    .aozora-bostock-logos {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
         
-         .bostock-logo-wrapper{
+         .bostock-logo-wrapper {
             border-bottom: none;
             border-right: solid 1px $primaryDarkColor;
 
@@ -21,19 +21,19 @@
     }
 
     .our-products{
-        .inner{
-            .mobile-product{
+        .inner {
+            .mobile-product {
                 display: none;
             }
 
-            .desktop-product{
+            .desktop-product {
                 display: block;
 
-                fieldset{
+                fieldset {
                     margin: 20px;
 
-                    legend{
-                        .product-title{
+                    legend {
+                        .product-title {
                             border-radius: $borderRadius;
                             text-align: center;
                             color: $lightTextColor;
@@ -46,7 +46,7 @@
                         }
                     }
 
-                    .product-wrapper{
+                    .product-wrapper {
                         display: flex;
                         flex-direction: column;
                         flex-wrap: wrap;
@@ -76,12 +76,12 @@
         }
     }
 
-    .contact{
-        .inner{
+    .contact {
+        .inner {
             display: flex;
             justify-content: space-around;
             
-            .contact-seperator{
+            .contact-seperator {
                 align-self: center;
                 display: block;
                 background-color: $silverColor;
@@ -153,7 +153,7 @@
         padding-top: 100px;
 
         .slideshow-section-wrapper {
-            height: calc(100vh - 100px);
+            height: calc(100vh - 100px); // Height offset for the fixed navigation
             position: relative;
             min-height: 750px;
 
@@ -265,10 +265,8 @@
                     }
 
                     .slick-dots {
+                        @include positioning(absolute, $l: 0, $b: 0);
                         width: 100%;
-                        position: absolute;
-                        bottom: 0px;
-                        left: 0;
                         z-index: 500;
                         text-align: center;
                         line-height: 100px;
@@ -283,10 +281,7 @@
             }
 
             .oil-brand-links {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
+                @include positioning(absolute, $l: 0, $r: 0, $b: 0);
             }
         }
     }
