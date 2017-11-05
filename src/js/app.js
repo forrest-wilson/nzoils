@@ -93,7 +93,7 @@ $(document).ready(function() {
     });
 
     // Shows the overlay depending on which product is clicked
-    $(".product-item").click(function() {
+    $(".product-item").click(function(event) {
         var $href = $(this).children("a").attr("href");
 
         $(this).each(function() {
@@ -104,7 +104,7 @@ $(document).ready(function() {
     });
 
     // Dismisses the product overlay
-    $(".fixed-close").click(function() {
+    $(".fixed-close").click(function(event) {
         $(this).parent().parent().fadeOut(transitionTime);
 
         event.preventDefault();
