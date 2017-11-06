@@ -327,3 +327,136 @@
         font-size: 85px!important;
     }
 }
+
+@media  screen and (min-width: 750px) {
+    .our-products{
+        .inner{
+
+            .mobile-product{
+                display: none;
+            }
+
+            .desktop-product{
+                display: block;
+                width: 100%;
+
+                .desktop-avocado-catergory,
+                .desktop-olive-catergory,
+                .desktop-infused-catergory{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+
+
+                    fieldset{
+                        margin: 20px;
+
+                        legend{
+                            text-align: center;
+                            .product-title{
+                                border-radius: $borderRadius;
+                                text-align: center;
+                                color: $lightTextColor;
+
+                                .blurb {
+                                    margin: 0;
+                                    padding: 16px;
+                                }
+                            }
+                        }
+
+                        .desktop-product-item{
+                            border-radius: $borderRadius;
+                            overflow: hidden;
+                            display: flex;
+                            flex-direction:row;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: #f2f2f2;
+                            margin: 20px;
+
+                            .desktop-product-image-wrapper{
+                                width:60%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                overflow: hidden;
+
+                                .desktop-product-image{
+                                    width:100%;
+                                }
+                            }
+                        } 
+                        .product-information-wrapper{
+                            width: 40%;
+                            padding: 10px;
+                            padding-left: 15px; 
+                            align-self: flex-end;
+                            
+                            .product-information{
+                                width: 100%;
+                                h1{
+                                    font-size: 1.5em;
+                                    font-family: "Beyond the Mountains";
+                                    margin: 0;
+                                    letter-spacing: 1px;
+                                    padding-left: 5px;
+                                    color: $avocadoSectionColor;
+                                    line-height: 30px;
+                                }
+                                p{
+                                    font-size: 12px;
+                                    width: 100%;
+                                    margin: 0;
+                                    max-height: 100px;
+                                    overflow: scroll;
+                                }
+                            }                 
+                        }
+
+                        .desktop-olive-product-wrapper{
+                            display: flex;
+                            flex-direction:row;
+                            justify-content: center;
+                            align-items: center;
+                    
+
+                            .olive-product{
+                                width: 45%;
+                            
+                                .product-container{
+                                    display: flex;
+                                    flex-direction:row;
+
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                                .product-information-wrapper{
+                                    width: 60%;
+
+                                    .product-information{
+                                        width: 100%;
+                                        padding: 10px;
+                                        p{
+                                            width:100%;
+                                        }
+                                    }
+                                }
+
+                                .desktop-olive-product-image-wrapper{
+                                    width:40%;
+                                    background-color: #FFF;
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }   
+                    }
+                }
+            }
+        }
+    }
+}
