@@ -20,61 +20,68 @@
         }
     }
 
-    .our-products{
+    .mobile-image, .desktop-product {
+        display: none;
+    }
+
+   .product-wrapper {
+    width: 100%;
+
+        .product-item {
+            min-width: 80%;
+            border-radius: $borderRadius;
+            margin: 10px!important;
+            padding:0px!important;
+            overflow: hidden!important; 
+
+            .tablet-image{
+                display: block;
+                 width:100%;
+            }
+        }
+
+        .olive-product, .infused-product, .balsamic-product{
+            min-width: 35%;
+        }
+    }
+
+    .media {
         .inner {
-            .mobile-product {
-                display: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction:column;
+            // width:100%;
+
+            article {
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
 
-            .desktop-product {
-                display: block;
+        
+            .videos {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap:wrap;
+                width: 90%;
+                .video1,
+                .video2{
+                    width: 100%;
+                    height: 550px;
 
-                fieldset {
-                    margin: 20px;
-
-                    legend {
-                        .product-title {
-                            border-radius: $borderRadius;
-                            text-align: center;
-                            color: $lightTextColor;
-
-                            .blurb {
-                                margin: 0;
-                                padding: 16px;
-                                text-align: center;
-                            }
-                        }
-                    }
-
-                    .product-wrapper {
-                        display: flex;
-                        flex-direction: column;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                        align-items: center;
-                        margin:15px;
-
-                        .product-item {
-                            // max-width: 120px;
-                            border-radius: $borderRadius;
-                            margin: 10px;
-                            padding:5px;
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
-                            cursor: pointer;
-                            overflow: hidden;
-
-                            .product-image {
-                                width:100%;
-                            }
-                        }
-                    }
+                   iframe {
+                        width: 100%;
+                        height: 100%;
+                        padding-bottom: 15px;
+                    } 
                 }
+                
             }
         }
     }
+
 
     .contact {
         .inner {
@@ -92,6 +99,127 @@
         }
     }
 }
+
+@media screen and (min-width: 1000px) {
+    .mobile-product{
+        display: none;
+    }
+    .desktop-product{
+        display: block!important;
+    }
+    .avocado-catergory,
+    .olive-catergory,
+    .infused-catergory,
+    .balsamic-catergory{
+        fieldset{
+            width: 95%;
+
+            legend{
+                text-align: center;
+            }
+
+            .product-wrapper {
+                width:95%;
+                
+                .avo-wrapper,
+                .olive-tree-wrapper,
+                .infused-oil-wrapper,
+                .infused-collection-wrapper,
+                .balsamic-vinegar-wrapper{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    border-radius: $borderRadius;
+                    overflow: hidden;
+                    margin: 10px;
+                    background-color: #f2f2f2;
+
+                    .product-image-wrapper{ 
+                        max-width: 60%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .desktop-image {
+                            width: 100%;
+                        }
+                    }
+
+                    .product-information-wrapper{
+                        width: 40%;
+                        padding: 10px;
+                        padding-left: 15px; 
+                        align-self: flex-end;
+                        
+                        .product-information{
+                            width: 100%;
+                            h1{
+                                font-size: 1.5em;
+                                font-family: "Beyond the Mountains";
+                                margin: 0;
+                                letter-spacing: 1px;
+                                padding-left: 5px;
+                                color: $avocadoSectionColor;
+                                line-height: 30px;
+                            }
+                            p{
+                                font-size: 12px;
+                                width: 100%;
+                                margin: 0;
+                            }
+                        }                 
+                    }
+                }
+                .olive-oil-wrapper,
+                .olive-tree-wrapper,
+                .infused-oil-wrapper,
+                .balsamic-vinegar-wrapper{
+                    width: 47%;
+                     .product-information-wrapper{
+                        width: 60%;
+                     }
+                     .product-image-wrapper{
+                        width: 40%;
+                     }
+                     .product-no-border-image{
+                        width: 100%;
+                        .desktop-image{
+                            width: 100%;
+                        }
+                     }
+                }
+
+                .infused-collection-wrapper{
+                    width:100%;
+                    .product-no-border-image{
+                        width: 100%;
+                        border-radius: $borderRadius;
+                        .desktop-image{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .videos {
+        .video1,
+        .video2{
+            width: 100%;
+            height: 550px;
+
+           iframe {
+                width: 100%;
+                height: 100%;
+                padding-bottom: 15px;
+            } 
+        }  
+    }
+}
+
 
 // Desktop Queries
 @media screen and (min-width: 1000px) {
@@ -182,7 +310,7 @@
                         padding: 0 85px; // Prevents any images from hiding behind the slideshow toggles
 
                         &:nth-child(1) {
-                            background-image: url("../img/slideshow/slideshow-bg-1.jpg");
+                            background-image: url("../img/slideshow/slideshow-bg-1.1.jpg");
                         }
 
                         &:nth-child(2) {
@@ -291,7 +419,9 @@
     }
 }
 
-@media screen and (min-width: 1200px) {
+
+
+@media screen and (min-width: 1330px) {
     .about {
         .inner {
             display: grid!important;
@@ -300,6 +430,13 @@
 
             .section-title {
                 grid-column: 1/4;
+            }
+
+            .about-blurb{
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column;
             }
         }
     }
