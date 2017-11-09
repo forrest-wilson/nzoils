@@ -289,7 +289,9 @@
             // width:100%;
 
             article {
-                height:500%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
 
         
@@ -299,13 +301,18 @@
                 align-items: center;
                 flex-wrap:wrap;
                 width: 90%;
-                height: 100%;
-                iframe {
+                .video1,
+                .video2{
                     width: 100%;
-                    height: 100%;
-                    // margin: 10px;
-                    padding-bottom: 10px;
+                    height: 250px;
+
+                   iframe {
+                        width: 100%;
+                        height: 100%;
+                        padding-bottom: 15px;
+                    } 
                 }
+                
             }
         }
     }
