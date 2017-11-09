@@ -37,6 +37,7 @@
         width: 30px;
         height: 22px;
         margin: 19px;
+        cursor: pointer;
 
         .ham-line {
             @include positioning(absolute, 0, 0);
@@ -464,6 +465,7 @@
         width: 30px;
         height: 30px;
         margin-bottom: 10px;
+        cursor: pointer;
 
         .close-line {
             @include positioning(absolute, 0, 0);
