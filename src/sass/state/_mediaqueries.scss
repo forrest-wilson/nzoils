@@ -425,11 +425,14 @@
     .about {
         .inner {
             display: grid!important;
+            display: -ms-grid!important;
             grid-template-columns: repeat(3, 1fr);
+            -ms-grid-columns: 1fr 1fr 1fr;
             justify-items: center;
 
             .section-title {
                 grid-column: 1/4;
+                -ms-grid-column: 1/4;
             }
 
             .about-blurb{
