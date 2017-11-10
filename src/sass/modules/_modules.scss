@@ -90,6 +90,16 @@
         .inner {
             max-width: 1500px;
             margin: 0 auto;
+
+            .section-title {
+                .heading-underline {
+                    height: 3px;
+                    background-color: $goldColor;
+                    max-width: 200px;
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
         }
     }
 
@@ -298,8 +308,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction:column;
-            // width:100%;
+            flex-direction: column;
+            width: 100%;
 
             article {
                 display: flex;
@@ -307,15 +317,15 @@
                 align-items: center;
             }
 
-        
             .videos {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                flex-wrap:wrap;
+                flex-wrap: wrap;
                 width: 90%;
+
                 .video1,
-                .video2{
+                .video2 {
                     width: 100%;
                     height: 250px;
 
