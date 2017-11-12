@@ -80,6 +80,7 @@
             .section-heading {
                 color: $goldColor;
                 text-align: center;
+                margin: 10px;
             }
         }
 
@@ -91,14 +92,12 @@
             max-width: 1500px;
             margin: 0 auto;
 
-            .section-title {
-                .heading-underline {
-                    height: 3px;
-                    background-color: $goldColor;
-                    max-width: 200px;
-                    margin: 0 auto;
-                    display: block;
-                }
+            .heading-underline {
+                height: 3px;
+                background-color: $goldColor;
+                max-width: 200px;
+                margin: 0 auto;
+                display: block;
             }
         }
     }
