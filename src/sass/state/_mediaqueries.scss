@@ -366,7 +366,7 @@
                         .inner {
                             img {
                                 width: 100%;
-                                max-width: 800px;
+                                max-width: 1000px;
                                 display: block;
                                 @include positioning(absolute, $b: 100px, $l: 50%);
                                 transform: translateX(-50%);
