@@ -165,7 +165,7 @@ $(document).ready(function() {
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 2000,
         dots: true,
         prevArrow: "<i class=\"slick-prev fa fa-angle-left\">Previous</i>",

@@ -359,7 +359,7 @@
                                 font-size: 50px;
                                 text-align: center;
                                 color: $lightTextColor;
-                                max-width: 750px;
+                                max-width: 1200px;
                                 margin: 0 auto;
                                 padding-top: 60px;
                             }
@@ -370,7 +370,7 @@
                         .inner {
                             img {
                                 width: 100%;
-                                max-width: 800px;
+                                max-width: 1000px;
                                 display: block;
                                 @include positioning(absolute, $b: 100px, $l: 50%);
                                 transform: translateX(-50%);
