@@ -50,8 +50,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction:column;
-            // width:100%;
+            flex-direction: column;
 
             article {
                 display: flex;
@@ -64,7 +63,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                flex-wrap:wrap;
+                flex-wrap: wrap;
                 width: 90%;
                 .video1,
                 .video2{
