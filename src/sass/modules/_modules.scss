@@ -194,6 +194,7 @@
     text-align: center;
     color: $lightTextColor;
     max-width: 550px;
+    margin: 0 auto; // Edge centering fix
 
     .blurb {
         margin: 0;
