@@ -91,7 +91,6 @@
         .inner {
             max-width: 1500px;
             margin: 0 auto;
-
             .heading-underline {
                 height: 3px;
                 background-color: $goldColor;
@@ -314,6 +313,13 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                .heading-underline {
+                    height: 3px;
+                    background-color: $goldColor;
+                    max-width: 200px;
+                    margin: 0 auto;
+                    display: block;
+                }
             }
 
             .videos {
