@@ -193,6 +193,7 @@
     text-align: center;
     color: $lightTextColor;
     max-width: 550px;
+    margin: 0 auto; // Edge centering fix
 
     .blurb {
         margin: 0;
@@ -453,6 +454,7 @@
 
     .nav-ul {
         overflow: scroll;
+        -ms-overflow-style: none;
 
         a {
             text-align: center;
