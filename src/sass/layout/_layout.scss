@@ -2,6 +2,11 @@
 //// Layout ////
 ////////////////
 
+// Fix for scroll bars showing in IE and Edge
+html {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
 .inner {
     padding: 10px;
 }

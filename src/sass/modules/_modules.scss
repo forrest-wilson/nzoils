@@ -447,6 +447,7 @@
 
     .nav-ul {
         overflow: scroll;
+        -ms-overflow-style: none;
 
         a {
             text-align: center;
