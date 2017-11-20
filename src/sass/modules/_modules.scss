@@ -316,18 +316,12 @@
             flex-direction: column;
             width: 100%;
 
-            article {
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                .heading-underline {
-                    height: 3px;
-                    background-color: $goldColor;
-                    max-width: 200px;
-                    margin: 0 auto;
-                    display: block;
-                }
+            .heading-underline {
+                height: 3px;
+                background-color: $goldColor;
+                max-width: 200px;
+                margin: 0 auto;
+                display: block
             }
 
             .videos {
