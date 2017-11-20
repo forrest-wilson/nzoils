@@ -9,13 +9,16 @@
         justify-content: center;
         align-items: center;
         flex-direction: row;
+        height: 135px;
         
-         .bostock-logo-wrapper {
+        .logo-wrapper {
             border-bottom: none;
             border-right: solid 1px $primaryDarkColor;
+            height: 100%;
 
-            .bostock-logo {
+            .logo {
                 max-width: 60%;
+                height: 100%;
             }
         }
     }
