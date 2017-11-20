@@ -6,23 +6,35 @@
 @media screen and (min-width: 700px) {
     .aozora-bostock-logos {
         height: 100%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        height: 135px;
+        min-height: 135px;
+        
+
+        .bostock-logo-wrapper{
+            border-bottom: none!important;
+        }
         
         .logo-wrapper {
             border-bottom: none;
             border-right: solid 1px $primaryDarkColor;
             height: 100%;
+            width: 100%;
 
-            .logo {
-                max-width: 60%;
+            a {
                 height: 100%;
+                width:100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
             }
         }
     }
+    
 
     .mobile-image, .desktop-product {
         display: none;
