@@ -325,7 +325,7 @@
         .slideshow-section-wrapper {
             height: calc(100vh - 100px); // Height offset for the fixed navigation
             position: relative;
-            min-height: 750px;
+            min-height: 760px;
 
             .slideshow-section {
                 width: 100vw;
@@ -385,7 +385,7 @@
                         .inner {
                             img {
                                 width: 100%;
-                                max-width: 1000px;
+                                max-width: 860px;
                                 display: block;
                                 @include positioning(absolute, $b: 100px, $l: 50%);
                                 transform: translateX(-50%);
@@ -458,6 +458,24 @@
 
     .mobile-nav, .nav-overlay {
         display: none;
+    }
+}
+
+@media screen and (min-width: 1270px) {
+    .main {
+        .slideshow-section-wrapper {
+            .slideshow-section {
+                .desktop-slideshow {
+                    .slide-one {
+                        .inner {
+                            img {
+                                max-width: 1000px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
