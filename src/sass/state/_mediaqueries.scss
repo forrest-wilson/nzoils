@@ -11,16 +11,17 @@
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        min-height: 135px;
+        max-height: 135px;
         
 
         .bostock-logo-wrapper{
             border-bottom: none!important;
+            border-right: solid 1px $primaryDarkColor;
         }
         
         .logo-wrapper {
+            min-height: 135px;
             border-bottom: none;
-            border-right: solid 1px $primaryDarkColor;
             height: 100%;
             width: 100%;
 
@@ -117,6 +118,10 @@
 }
 
 @media screen and (min-width: 1000px) {
+    .aozora-bostock-logos {
+        min-height: 135px;
+    }
+
     .mobile-product{
         display: none;
     }
@@ -263,6 +268,7 @@
 
 // Desktop Queries
 @media screen and (min-width: 1000px) {
+
     .header {
         height: 100px;
         transition: $transitionSpeed;
