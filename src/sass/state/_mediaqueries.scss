@@ -601,6 +601,7 @@
                 justify-items: center;
 
                 .desktop-about-image:nth-child(1) {
+                    grid-column: inherit;
                     -ms-grid-column: 1;
                     -ms-grid-column-span: 1;
                 }
@@ -610,6 +611,7 @@
                     justify-content: center;
                     align-content: center;
                     flex-direction: column;
+                    grid-column: inherit;
                     -ms-grid-column: 2;
                     -ms-grid-column-span: 1;
                     margin-top: auto;
@@ -619,6 +621,7 @@
                 }
 
                 .desktop-about-image:nth-child(2) {
+                    grid-column: inherit;
                     -ms-grid-column: 3;
                     -ms-grid-column-span: 1;
                 }
