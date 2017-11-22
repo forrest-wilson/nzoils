@@ -378,13 +378,13 @@
                             padding: 0;
 
                             .blurb {
-                                font-size: 45px;
+                                font-size: 3.5em;
                                 line-height: 60px;
                                 text-align: center;
                                 color: $lightTextColor;
-                                max-width: 650px;
+                                max-width: 800px;
                                 margin: 0 auto;
-                                padding-top: 60px;
+                                padding-top: 50px;
                             }
                         }
                     }
@@ -473,15 +473,15 @@
     }
 }
 
-// @media screen and (min-width: 1270px) {
+// @media screen and (max-width: 1269px) {
 //     .main {
 //         .slideshow-section-wrapper {
 //             .slideshow-section {
 //                 .desktop-slideshow {
 //                     .slide-one {
 //                         .inner {
-//                             img {
-//                                 max-width: 1000px;
+//                             img{
+//                                 max-width: 1000px!important;
 //                             }
 //                         }
 //                     }
@@ -490,6 +490,26 @@
 //         }
 //     }
 // }
+
+@media screen and (min-width: 1270px) {
+    .main {
+        .slideshow-section-wrapper {
+            .slideshow-section {
+                .desktop-slideshow {
+                    .slide-one {
+                        .inner {
+                            .blurb{
+                                font-size: 3.2em;
+                                line-height: 80px;
+                                max-width: 800px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media screen and (min-width: 1330px) {
     .about {
@@ -542,14 +562,6 @@
         .inner {
             height: auto;
         }
-    }
-}
-
-@media screen and (min-height: 1050px) {
-    .desktop-slideshow .inner .blurb {
-        font-size: 85px!important;
-        // max-width: 900px;
-        // line-height: 500px;
     }
 }
 
