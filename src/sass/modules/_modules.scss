@@ -313,40 +313,40 @@
     }
 
     
-    .media {
-        .inner {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            width: 100%;
+    // .media {
+    //     .inner {
+    //         height: 100%;
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         flex-direction: column;
+    //         width: 100%;
 
-            .videos {
-                height: 100%;
+    //         .videos {
+    //             height: 100%;
                 
-                width: 90%;
+    //             width: 90%;
 
-                .video1,
-                .video2 {
-                    width: 100%;
-                    height: 100%;
-                    padding-bottom: 20px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-wrap: wrap;
+    //             .video1,
+    //             .video2 {
+    //                 width: 100%;
+    //                 height: 100%;
+    //                 padding-bottom: 20px;
+    //                 display: flex;
+    //                 justify-content: center;
+    //                 align-items: center;
+    //                 flex-wrap: wrap;
 
-                //    iframe {
-                //         width: 100%;
-                //         min-height: 100%!important;
-                //         // padding-bottom: 15px;
-                //     } 
-                }
+    //             //    iframe {
+    //             //         width: 100%;
+    //             //         min-height: 100%!important;
+    //             //         // padding-bottom: 15px;
+    //             //     } 
+    //             }
                 
-            }
-        }
-    }
+    //         }
+    //     }
+    // }
 
     .distributor {
         margin-bottom: 25px;
