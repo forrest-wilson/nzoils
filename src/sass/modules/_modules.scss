@@ -107,10 +107,9 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 50vh;
 
             .inner {
-                height: 50vh;
+                min-height: 360px;
                 position: relative;
 
                 .blurb {

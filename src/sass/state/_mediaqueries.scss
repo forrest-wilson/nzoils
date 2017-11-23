@@ -217,7 +217,7 @@
                     .infused-oil-wrapper,
                     .balsamic-vinegar-wrapper{
                         width: 47%;
-                        
+
                          .product-information-wrapper{
                             width: 60%;
                          }
@@ -332,8 +332,8 @@
         padding-top: 100px;
 
         .slideshow-section-wrapper {
-            // height: calc(100vh - 120px); // Height offset for the fixed navigation
-            // position: relative;
+            height: calc(100vh - 100px); // Height offset for the fixed navigation
+            position: relative;
             height: 75vh;
             min-height: 50%;
             width:100%;
@@ -341,7 +341,7 @@
 
             .slideshow-section {
                 width: 100%;
-                // height: calc(100% - 135.47px);
+                height: calc(100% - 135.47px);
                 height: 100%;
                 
 
