@@ -524,7 +524,7 @@
     .info {
         position: relative;
         width: 100%;
-        height: 100%;
+        max-width: 100%; // Needed for IE inheritance
         height: calc(100% - 40px);
         overflow-y: auto;
         padding: 0 10px;
@@ -543,7 +543,10 @@
             display: block;
             border-radius: $borderRadius;
         }
-        .info-wrapper{
+
+        .info-wrapper {
+            max-width: 100%; // Needed for IE inheritance
+
             h1 {
                 font-weight: 100;
                 font-family: "Beyond the Mountains";
