@@ -138,10 +138,11 @@
         .aozora-bostock-logos {
             background-color: $secondaryDarkColor;
             width: 100%;
+            height: 100%;
 
             .logo-wrapper {
-                width: 100%;
-                height: 100%;
+                width: inherit;
+                height: 100px; // Has to be explicit for IE to align correctly
                 min-height: 100px;
                 display: flex;
                 flex-direction: column;
@@ -149,26 +150,17 @@
                 justify-content: center;
                 
                 a {
-                    height: 80%;
-                    width:80%;
+                    height: 100%;
+                    width: inherit;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                       
-                    .bostock-logo {
-                        max-width: 100%;
 
+                    .logo {
+                        max-width: 100%;
+                        max-height: 100%;
                     }
-
-                    .aozora-logo {
-                        max-width: 100%;
-                    } 
-                }
-
-                img {
-                    max-height: 100%;
-                    
                 }
             }
             
