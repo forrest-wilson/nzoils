@@ -332,19 +332,16 @@
         padding-top: 100px;
 
         .slideshow-section-wrapper {
-            height: calc(100vh - 100px); // Height offset for the fixed navigation
+            min-height: 512px;
+            height: calc(100vh - 200px); // Height offset for the fixed navigation
             position: relative;
-            height: 75vh;
-            min-height: 50%;
-            width:100%;
+            width: 100%;
             overflow: hidden;
 
             .slideshow-section {
                 width: 100%;
-                height: calc(100% - 135.47px);
                 height: 100%;
                 
-
                 .mobile-slideshow {
                     display: none;
                 }
