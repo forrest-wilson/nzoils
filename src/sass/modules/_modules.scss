@@ -75,7 +75,7 @@
 
     .section {
         article {
-            margin-bottom: 25px;
+            margin-bottom: 40px;
 
             .section-heading {
                 color: $goldColor;
@@ -135,6 +135,8 @@
     }
 
     .oil-brand-links {
+        margin-bottom: 30px;
+
         .aozora-bostock-logos {
             background-color: $secondaryDarkColor;
             width: 100%;
@@ -170,93 +172,102 @@
         }
     }
 
-.desktop-product,
-.tablet-image{
-    display: none;
-}
-
-.avocado-catergory, 
-.olive-catergory, 
-.infused-catergory,
-.balsamic-catergory{
-    margin: 20px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction:column;
-}
-
-.product-title {
-    border-radius: $borderRadius;
-    text-align: center;
-    color: $lightTextColor;
-    max-width: 550px;
-    margin: 0 auto; // Edge centering fix
-
-    .blurb {
-        margin: 0;
-        padding: 16px;
+    .our-products {
+        .inner {
+            .mobile-product {
+                .category {
+                    margin-bottom: 25px;
+                }
+            }
+        }
     }
-}
 
-.product-wrapper {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    .desktop-product,
+    .tablet-image{
+        display: none;
+    }
 
-    .product-item {
-        max-width: 120px;
+    .desktop-product {
+        .category {
+            margin: 40px 20px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    .product-title {
         border-radius: $borderRadius;
-        margin: 10px;
-        padding:5px;
+        text-align: center;
+        color: $lightTextColor;
+        max-width: 550px;
+        margin: 0 auto; // Edge centering fix
+
+        .blurb {
+            margin: 0;
+            padding: 16px;
+        }
+    }
+
+    .product-wrapper {
         height: 100%;
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        cursor: pointer;
 
-        .product-image {
-            width:100%;
+        .product-item {
+            max-width: 120px;
+            border-radius: $borderRadius;
+            margin: 10px;
+            padding:5px;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            .product-image {
+                width:100%;
+            }
         }
     }
-}
 
-.avocado-title {
-    background-color: $avocadoSectionColor;
-}
+    .avocado-title {
+        background-color: $avocadoSectionColor;
+    }
 
-.olive-title {
-    background-color: $oliveSectionColor;
-}
+    .olive-title {
+        background-color: $oliveSectionColor;
+    }
 
-.infused-title {
-    background-color: $infusedSectionColor;
-}
+    .infused-title {
+        background-color: $infusedSectionColor;
+    }
 
-.balsamic-title {
-    background-color: $balsamicSectionColor;
-}
+    .balsamic-title {
+        background-color: $balsamicSectionColor;
+    }
 
-.avocado-product {
-    border: solid 4px $avocadoSectionColor;
-}
+    .avocado-product {
+        border: solid 4px $avocadoSectionColor;
+    }
 
-.olive-product {
-    border: solid 4px $oliveSectionColor;
-}
+    .olive-product {
+        border: solid 4px $oliveSectionColor;
+    }
 
-.infused-product {
-    border: solid 4px $infusedSectionColor;
-}
+    .infused-product {
+        border: solid 4px $infusedSectionColor;
+    }
 
-.balsamic-product {
-    border: solid 4px $balsamicSectionColor;
-}
+    .balsamic-product {
+        border: solid 4px $balsamicSectionColor;
+    }
 
 
     .about {
@@ -340,24 +351,28 @@
     //     }
     // }
 
-    .distributor {
-        margin-bottom: 25px;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+    .distributors {
+        margin-bottom: 40px;
 
-        img {
-            max-width: 100%;
-            max-height: 175px;
-            margin: 0 auto;
-            display: block;
-        }
-
-        h2 {
-            text-align: center;
-            color: green; // Unsure what color to set this text to
+        .distributor {
+            margin-bottom: 25px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+    
+            img {
+                max-width: 100%;
+                max-height: 175px;
+                margin: 0 auto;
+                display: block;
+            }
+    
+            h2 {
+                text-align: center;
+                color: green; // Unsure what color to set this text to
+            }
         }
     }
 
