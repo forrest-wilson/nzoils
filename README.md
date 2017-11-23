@@ -46,6 +46,8 @@ npm run build
 
 This will rebuild the 'temp' folder and create the 'dist' folder containing all files ready for deployment.
 
+There is also a handy shell script housed in this repo that will build the dist folder for you.
+
 **Note:** Please ensure all features work by running the 'npm run start' command before deploying the 'dist' folder to any live servers.
 
 ### Updating after new node module installs
