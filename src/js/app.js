@@ -12,7 +12,7 @@ $(document).ready(function() {
     toggleSlideshow(false);
     navigationHeightChange();
 
-    // Logs the $windowWidth variable to the console
+    // Updates the $windowWidth variable
     function updateWindowWidth() {
         $windowWidth = $(window).width();
     }
@@ -108,6 +108,18 @@ $(document).ready(function() {
         $(this).parent().parent().fadeOut(transitionTime);
 
         event.preventDefault();
+    });
+
+    // Adds an event listener to the esc key press
+    $(document).on("keypress", function(event) {
+        switch (event.keyCode) {
+            case 27: // Esc keyCode
+                $.each($(".fixed-close"), function(i, val) {
+                    $(this).parent().parent().fadeOut(transitionTime);
+                });
+            default:
+                break;
+        }
     });
 
     // Does stuff on window resize
