@@ -537,12 +537,13 @@
 @media screen and (min-width: 1330px) {
     .about {
         .inner {
-            .about-section-info{
+            .about-section-info {
                 display: grid!important;
                 display: -ms-grid!important;
                 grid-template-columns: 1fr 1fr 1fr;
                 -ms-grid-columns: 1fr 1fr 1fr;
                 justify-items: center;
+                margin-bottom: 20px;
 
                 .desktop-about-image:nth-child(1) {
                     grid-column: inherit;
@@ -550,7 +551,7 @@
                     -ms-grid-column-span: 1;
                 }
 
-                .about-blurb{ 
+                .about-blurb { 
                     display: flex;
                     justify-content: center;
                     align-content: center;
