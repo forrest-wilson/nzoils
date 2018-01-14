@@ -217,6 +217,9 @@ gulp.task("dist-font", () => {
 
     gulp.src("./temp/fonts/beyond_the_mountains/*.ttf")
     .pipe(gulp.dest("./dist/fonts/beyond_the_mountains"));
+
+    gulp.src("./temp/fonts/andalusia_script/**/*.*")
+    .pipe(gulp.dest("./dist/fonts/andalusia_script"));
 });
 
 // Builds the dist folder for distribution
