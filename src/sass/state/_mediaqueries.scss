@@ -57,7 +57,7 @@
             }
         }
 
-        .olive-product, .infused-product, .balsamic-product{
+        .olive-product, .infused-product, .infused-avo-product, .balsamic-product{
             min-width: 35%;
         }
     }
@@ -338,6 +338,7 @@
                         .avo-wrapper,
                         .olive-tree-wrapper,
                         .infused-oil-wrapper,
+                        .infused-avo-oil-wrapper,
                         .infused-collection-wrapper,
                         .balsamic-vinegar-wrapper{
                             height: 100%;
@@ -382,23 +383,35 @@
                                         line-height: 35px;
                                         word-spacing: 5px;
                                     }
+                                    .aozora-garlic-header{
+                                        color: #CAB9A0;
+                                    }
+                                    .aozora-lime-header{
+                                        color: rgb(162, 196, 84);
+                                    }
                                     .bostock-olive-header{
                                         color: #B1B825;
+                                        font-family: "Andalusia Script";
                                     }
                                     .bostock-lemon-header{
                                         color: #FCD500;
+                                        font-family: "Andalusia Script";
                                     }
                                     .bostock-rosemary-header{
                                         color: #10823F;
+                                        font-family: "Andalusia Script";
                                     }
                                     .bostock-truffle-header{
                                         color: #B5BB26;
+                                        font-family: "Andalusia Script";
                                     }
                                     .bostock-garlic-header{
                                         color: #B2AF9B;
+                                        font-family: "Andalusia Script";
                                     }
                                     .bostock-balsamic-header{
                                         color: #4F4534;
+                                        font-family: "Andalusia Script";
                                     }
                                     p{
                                         font-size: 14px;
@@ -414,7 +427,8 @@
                         .olive-oil-wrapper,
                         .olive-tree-wrapper,
                         .infused-oil-wrapper,
-                        .balsamic-vinegar-wrapper{
+                        .balsamic-vinegar-wrapper,
+                        .infused-avo-oil-wrapper {
                             width: 47%;
     
                              .product-information-wrapper{

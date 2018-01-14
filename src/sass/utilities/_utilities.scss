@@ -15,6 +15,12 @@
          url("../fonts/Roboto/Roboto-Bold.ttf");
 }
 
+// Bostock typeface
+@font-face {
+    font-family: "Andalusia Script";
+    src: url("../fonts/andalusia_Script/TTF/Andalusia.ttf"),
+}
+
 // Float Clearing
 .clearfix:after {
     content: "";

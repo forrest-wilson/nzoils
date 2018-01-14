@@ -235,7 +235,6 @@
             }
         }
     }
-
     .avocado-title {
         background-color: $avocadoSectionColor;
     }
@@ -246,6 +245,10 @@
 
     .infused-title {
         background-color: $infusedSectionColor;
+    }
+
+    .infused-avo-title {
+        background-color: $infusedAvoSectionColor;
     }
 
     .balsamic-title {
@@ -262,6 +265,10 @@
 
     .infused-product {
         border: solid 4px $infusedSectionColor;
+    }
+
+    .infused-avo-product {
+        border: solid 4px $infusedAvoSectionColor;
     }
 
     .balsamic-product {
@@ -560,25 +567,40 @@
                 line-height: 50px;
                 word-spacing: 5px;
             }
-            
+            .aozora-garlic-header{
+                color: #CAB9A0;
+            }
+            .aozora-lime-header{
+                color: rgb(162, 196, 84);
+            }
             .bostock-olive-header{
                 color: #B1B825;
+                font-family: "Andalusia Script";
             }
             .bostock-lemon-header{
                 color: #FCD500;
+                font-family: "Andalusia Script";
             }
             .bostock-rosemary-header{
                 color: #10823F;
+                font-family: "Andalusia Script";
             }
             .bostock-truffle-header{
                 color: #B5BB26;
+                font-family: "Andalusia Script";
             }
             .bostock-garlic-header{
                 color: #B2AF9B;
+                font-family: "Andalusia Script";
             }
             .bostock-balsamic-header{
                 color: #4F4534;
+                font-family: "Andalusia Script";
             }
         }
     }
 }
+
+// .bostockTypeface{
+//     font-family: "Andalusia Script";
+// }
